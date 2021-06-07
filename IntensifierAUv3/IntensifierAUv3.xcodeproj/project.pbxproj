@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		07EA7AC5266E8A0D00759EFE /* IntensifierAUv3Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7AC3266E8A0D00759EFE /* IntensifierAUv3Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EA7ADA266E94D000759EFE /* IntensifierDSPKernelAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07EA7AD9266E94D000759EFE /* IntensifierDSPKernelAdapter.mm */; };
+		07EA7ADC266E958000759EFE /* IntensifierDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7ADB266E958000759EFE /* IntensifierDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EA7AE0266E970A00759EFE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7ADF266E970A00759EFE /* AudioToolbox.framework */; };
+		07EA7AE2266E971000759EFE /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AE1266E971000759EFE /* CoreAudioKit.framework */; };
+		07EA7AE4266E971B00759EFE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AE3266E971B00759EFE /* AVFoundation.framework */; };
+		07EA7AE6266E974000759EFE /* BufferedAudioBus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7AE5266E974000759EFE /* BufferedAudioBus.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IntensifierAUv3Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EA7AC3266E8A0D00759EFE /* IntensifierAUv3Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntensifierAUv3Framework.h; sourceTree = "<group>"; };
 		07EA7AC4266E8A0D00759EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07EA7AD9266E94D000759EFE /* IntensifierDSPKernelAdapter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IntensifierDSPKernelAdapter.mm; sourceTree = "<group>"; };
+		07EA7ADB266E958000759EFE /* IntensifierDSPKernelAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntensifierDSPKernelAdapter.h; sourceTree = "<group>"; };
+		07EA7ADF266E970A00759EFE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		07EA7AE1266E971000759EFE /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreAudioKit.framework; sourceTree = DEVELOPER_DIR; };
+		07EA7AE3266E971B00759EFE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		07EA7AE5266E974000759EFE /* BufferedAudioBus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BufferedAudioBus.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +33,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EA7AE4266E971B00759EFE /* AVFoundation.framework in Frameworks */,
+				07EA7AE2266E971000759EFE /* CoreAudioKit.framework in Frameworks */,
+				07EA7AE0266E970A00759EFE /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,7 +46,9 @@
 			isa = PBXGroup;
 			children = (
 				07EA7AC2266E8A0D00759EFE /* IntensifierAUv3Framework */,
+				07EA7ACC266E908700759EFE /* Shared */,
 				07EA7AC1266E8A0D00759EFE /* Products */,
+				07EA7AD2266E928900759EFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +69,42 @@
 			path = IntensifierAUv3Framework;
 			sourceTree = "<group>";
 		};
+		07EA7ACC266E908700759EFE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				07EA7ACD266E90EB00759EFE /* AudioUnit */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		07EA7ACD266E90EB00759EFE /* AudioUnit */ = {
+			isa = PBXGroup;
+			children = (
+				07EA7AD6266E935500759EFE /* Support */,
+			);
+			path = AudioUnit;
+			sourceTree = "<group>";
+		};
+		07EA7AD2266E928900759EFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07EA7AE3266E971B00759EFE /* AVFoundation.framework */,
+				07EA7AE1266E971000759EFE /* CoreAudioKit.framework */,
+				07EA7ADF266E970A00759EFE /* AudioToolbox.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		07EA7AD6266E935500759EFE /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				07EA7AD9266E94D000759EFE /* IntensifierDSPKernelAdapter.mm */,
+				07EA7ADB266E958000759EFE /* IntensifierDSPKernelAdapter.h */,
+				07EA7AE5266E974000759EFE /* BufferedAudioBus.hpp */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -59,6 +112,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EA7AE6266E974000759EFE /* BufferedAudioBus.hpp in Headers */,
+				07EA7ADC266E958000759EFE /* IntensifierDSPKernelAdapter.h in Headers */,
 				07EA7AC5266E8A0D00759EFE /* IntensifierAUv3Framework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 07EA7ABA266E8A0D00759EFE /* Build configuration list for PBXProject "IntensifierAUv3Framework" */;
+			buildConfigurationList = 07EA7ABA266E8A0D00759EFE /* Build configuration list for PBXProject "IntensifierAUv3" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EA7ADA266E94D000759EFE /* IntensifierDSPKernelAdapter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +379,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07EA7ABA266E8A0D00759EFE /* Build configuration list for PBXProject "IntensifierAUv3Framework" */ = {
+		07EA7ABA266E8A0D00759EFE /* Build configuration list for PBXProject "IntensifierAUv3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07EA7AC6266E8A0D00759EFE /* Debug */,
