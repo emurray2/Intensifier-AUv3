@@ -106,13 +106,13 @@
 		07EA7AD6266E935500759EFE /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				07EA7AD9266E94D000759EFE /* IntensifierDSPKernelAdapter.mm */,
-				07EA7ADB266E958000759EFE /* IntensifierDSPKernelAdapter.h */,
 				07EA7AE5266E974000759EFE /* BufferedAudioBus.hpp */,
-				079A36CF2671559300DD518E /* ParameterRamper.hpp */,
-				079A36D12671561800DD518E /* DSPKernel.mm */,
 				079A36D32671563A00DD518E /* DSPKernel.hpp */,
+				079A36D12671561800DD518E /* DSPKernel.mm */,
 				079A36D5267156B200DD518E /* IntensifierDSPKernel.hpp */,
+				07EA7ADB266E958000759EFE /* IntensifierDSPKernelAdapter.h */,
+				07EA7AD9266E94D000759EFE /* IntensifierDSPKernelAdapter.mm */,
+				079A36CF2671559300DD518E /* ParameterRamper.hpp */,
 			);
 			path = Support;
 			sourceTree = "<group>";
