@@ -18,6 +18,7 @@
 		07EA7AE2266E971000759EFE /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AE1266E971000759EFE /* CoreAudioKit.framework */; };
 		07EA7AE4266E971B00759EFE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AE3266E971B00759EFE /* AVFoundation.framework */; };
 		07EA7AE6266E974000759EFE /* BufferedAudioBus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7AE5266E974000759EFE /* BufferedAudioBus.hpp */; };
+		07F39FFF267180F600DCE13A /* AUv3IntensifierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F39FFE267180F600DCE13A /* AUv3IntensifierController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		07EA7AE1266E971000759EFE /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreAudioKit.framework; sourceTree = DEVELOPER_DIR; };
 		07EA7AE3266E971B00759EFE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		07EA7AE5266E974000759EFE /* BufferedAudioBus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BufferedAudioBus.hpp; sourceTree = "<group>"; };
+		07F39FFE267180F600DCE13A /* AUv3IntensifierController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		07EA7ACD266E90EB00759EFE /* AudioUnit */ = {
 			isa = PBXGroup;
 			children = (
+				07F39FFE267180F600DCE13A /* AUv3IntensifierController.swift */,
 				07EA7AD6266E935500759EFE /* Support */,
 			);
 			path = AudioUnit;
@@ -164,6 +167,7 @@
 				TargetAttributes = {
 					07EA7ABF266E8A0D00759EFE = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -201,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				079A36D22671561800DD518E /* DSPKernel.mm in Sources */,
+				07F39FFF267180F600DCE13A /* AUv3IntensifierController.swift in Sources */,
 				07EA7ADA266E94D000759EFE /* IntensifierDSPKernelAdapter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +340,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -356,6 +362,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "";
 				VALIDATE_PRODUCT = NO;
 			};
@@ -366,6 +374,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -387,6 +396,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "";
 				VALIDATE_PRODUCT = NO;
 			};

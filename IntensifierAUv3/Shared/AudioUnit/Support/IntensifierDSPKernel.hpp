@@ -41,6 +41,7 @@ static inline double squared(double x) {
  */
 class IntensifierDSPKernel : public DSPKernel
 {
+public:
     struct IntensifierState {
         float inputdB = 0.0;
         float attackdB = 0.0;

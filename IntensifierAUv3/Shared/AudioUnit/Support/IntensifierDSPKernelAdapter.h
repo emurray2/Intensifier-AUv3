@@ -1,6 +1,7 @@
 #import <AudioToolbox/AudioToolbox.h>
+@class AUv3IntensifierController;
 NS_ASSUME_NONNULL_BEGIN
-@interface FilterDSPKernelAdapter : NSObject
+@interface IntensifierDSPKernelAdapter : NSObject
 
 @property (nonatomic) AUAudioFrameCount maximumFramesToRender;
 @property (nonatomic, readonly) AUAudioUnitBus *inputBus;
