@@ -1,5 +1,4 @@
 import Foundation
-import AudioToolbox
 
 class AUv3IntensifierParameters {
     private enum AUv3IntensifierParam: AUParameterAddress {
@@ -162,5 +161,20 @@ class AUv3IntensifierParameters {
                 return "?"
             }
         }
+    }
+    func setParameterValues(
+        inputAmount: AUValue,
+        attackAmount: AUValue,
+        releaseAmount: AUValue,
+        attackTime: AUValue,
+        releaseTime: AUValue,
+        outputAmount: AUValue
+    ) {
+        inputAmountParam.value = inputAmount
+        attackAmountParam.value = attackAmount
+        releaseAmountParam.value = releaseAmount
+        attackTimeParam.value = attackTime
+        releaseTimeParam.value = releaseTime
+        outputAmountParam.value = outputAmount
     }
 }
