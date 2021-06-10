@@ -1,6 +1,10 @@
 import CoreAudioKit
 public class AUv3IntensifierController: NSObject {
-    var audioUnitCreated: AUAudioUnit?
+    public var audioUnitCreated: AUv3Intensifier? {
+        didSet {
+            audioUnitCreated?.viewController = self
+        }
+    }
     public func beginRequest(with context: NSExtensionContext) {
     }
 }

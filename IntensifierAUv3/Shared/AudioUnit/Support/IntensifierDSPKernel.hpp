@@ -213,6 +213,12 @@ public:
              The parameter values are updated every sample! This is very
              expensive. You probably want to do things differently.
              */
+            inputAmountRamper.getAndStep();
+            attackAmountRamper.getAndStep();
+            releaseAmountRamper.getAndStep();
+            attackTimeRamper.getAndStep();
+            releaseTimeRamper.getAndStep();
+            outputAmountRamper.getAndStep();
             //double inputAmount = double(inputAmountRamper.getAndStep());
             //double attackAmount = double(attackAmountRamper.getAndStep());
             //double releaseAmount = double(releaseAmountRamper.getAndStep());
@@ -230,9 +236,9 @@ public:
             }
         }
         // Squelch any blowups once per cycle.
-//        for (int channel = 0; channel < channelCount; ++channel) {
-//            channelStates[channel].convertBadStateValuesToZero();
-//        }
+        for (int channel = 0; channel < channelCount; ++channel) {
+            channelStates[channel].convertBadStateValuesToZero();
+        }
     }
 private:
     std::vector<IntensifierState> channelStates;

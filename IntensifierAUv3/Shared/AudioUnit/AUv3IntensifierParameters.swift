@@ -143,20 +143,20 @@ class AUv3IntensifierParameters {
         }
 
         // Closure returning string representation of requested parameter value.
-        parameterTree.implementorStringFromValueCallback = { param, value in
+        parameterTree.implementorStringFromValueCallback = { param, valuePointer in
             switch param.address {
             case AUv3IntensifierParam.inputAmount.rawValue:
-                return String(format: "%.2f", value ?? param.value)
+                return String(format: "%.2f", valuePointer?.pointee ?? param.value)
             case AUv3IntensifierParam.attackAmount.rawValue:
-                return String(format: "%.2f", value ?? param.value)
+                return String(format: "%.2f", valuePointer?.pointee ?? param.value)
             case AUv3IntensifierParam.releaseAmount.rawValue:
-                return String(format: "%.2f", value ?? param.value)
+                return String(format: "%.2f", valuePointer?.pointee ?? param.value)
             case AUv3IntensifierParam.attackTime.rawValue:
-                return String(format: "%.2f", value ?? param.value)
+                return String(format: "%.2f", valuePointer?.pointee ?? param.value)
             case AUv3IntensifierParam.releaseTime.rawValue:
-                return String(format: "%.2f", value ?? param.value)
+                return String(format: "%.2f", valuePointer?.pointee ?? param.value)
             case AUv3IntensifierParam.outputAmount.rawValue:
-                return String(format: "%.2f", value ?? param.value)
+                return String(format: "%.2f", valuePointer?.pointee ?? param.value)
             default:
                 return "?"
             }

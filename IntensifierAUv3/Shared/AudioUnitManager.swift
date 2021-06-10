@@ -15,25 +15,6 @@ public struct Preset {
 
 public class AudioUnitManager {
     private var audioUnit: AUv3Intensifier?
-    // Gets the audio unit's defined presets.
-    public var presets: [Preset] {
-        guard let audioUnitPresets = audioUnit?.factoryPresets else {
-            return []
-        }
-        return audioUnitPresets.map { preset -> Preset in
-            return Preset(preset: preset)
-        }
-    }
-    // Retrieves or sets the audio unit's current preset.
-    public var currentPreset: Preset? {
-        get {
-            guard let preset = audioUnit?.currentPreset else { return nil }
-            return Preset(preset: preset)
-        }
-        set {
-            audioUnit?.currentPreset = newValue?.audioUnitPreset
-        }
-    }
 
     public private(set) var viewController: AUv3IntensifierController!
 
@@ -68,6 +49,26 @@ public class AudioUnitManager {
         }
     }
 
+    // Gets the audio unit's defined presets.
+    public var presets: [Preset] {
+        guard let audioUnitPresets = audioUnit?.factoryPresets else {
+            return []
+        }
+        return audioUnitPresets.map { preset -> Preset in
+            return Preset(preset: preset)
+        }
+    }
+    // Retrieves or sets the audio unit's current preset.
+    public var currentPreset: Preset? {
+        get {
+            guard let preset = audioUnit?.currentPreset else { return nil }
+            return Preset(preset: preset)
+        }
+        set {
+            audioUnit?.currentPreset = newValue?.audioUnitPreset
+        }
+    }
+
     private var inputAmountParameter: AUParameter!
     private var attackAmountParameter: AUParameter!
     private var releaseAmountParameter: AUParameter!
@@ -96,7 +97,7 @@ public class AudioUnitManager {
     public init() {
 
         /*
-         Register our `AUAudioUnit` subclass, `AUv3FilterDemo`, to make it able
+         Register our `AUAudioUnit` subclass, `AUv3Intensifier`, to make it able
          to be instantiated via its component description.
 
          Note that this registration is local to this process.
