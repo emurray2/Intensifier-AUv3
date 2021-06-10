@@ -27,7 +27,7 @@ class AUv3IntensifierParameters {
     var attackAmountParam: AUParameter = {
         let parameter =
             AUParameterTree.createParameter(withIdentifier: "attackAmount",
-                                            name: "Input Amount",
+                                            name: "Attack Amount",
                                             address: AUv3IntensifierParam.attackAmount.rawValue,
                                             min: -40.0,
                                             max: 30.0,
@@ -77,7 +77,7 @@ class AUv3IntensifierParameters {
                                             valueStrings: nil,
                                             dependentParameters: nil)
         // Set default value
-        parameter.value = 0.0
+        parameter.value = 20.0
 
         return parameter
     }()
@@ -96,7 +96,7 @@ class AUv3IntensifierParameters {
                                             valueStrings: nil,
                                             dependentParameters: nil)
         // Set default value
-        parameter.value = 0.0
+        parameter.value = 1.0
 
         return parameter
     }()
