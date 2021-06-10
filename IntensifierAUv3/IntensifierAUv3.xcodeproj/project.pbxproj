@@ -21,6 +21,7 @@
 		07F39FFF267180F600DCE13A /* AUv3IntensifierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F39FFE267180F600DCE13A /* AUv3IntensifierController.swift */; };
 		07F3A002267188C000DCE13A /* AUv3IntensifierParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3A000267185CB00DCE13A /* AUv3IntensifierParameters.swift */; };
 		07F3A00426719CD900DCE13A /* AUv3Intensifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3A00326719CD900DCE13A /* AUv3Intensifier.swift */; };
+		07F3A0062671A41D00DCE13A /* AudioUnitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3A0052671A41D00DCE13A /* AudioUnitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		07F39FFE267180F600DCE13A /* AUv3IntensifierController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierController.swift; sourceTree = "<group>"; };
 		07F3A000267185CB00DCE13A /* AUv3IntensifierParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierParameters.swift; sourceTree = "<group>"; };
 		07F3A00326719CD900DCE13A /* AUv3Intensifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3Intensifier.swift; sourceTree = "<group>"; };
+		07F3A0052671A41D00DCE13A /* AudioUnitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		07EA7ACC266E908700759EFE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				07F3A0052671A41D00DCE13A /* AudioUnitManager.swift */,
 				07F39FFE267180F600DCE13A /* AUv3IntensifierController.swift */,
 				07EA7ACD266E90EB00759EFE /* AudioUnit */,
 			);
@@ -213,6 +216,7 @@
 				079A36D22671561800DD518E /* DSPKernel.mm in Sources */,
 				07F3A002267188C000DCE13A /* AUv3IntensifierParameters.swift in Sources */,
 				07F39FFF267180F600DCE13A /* AUv3IntensifierController.swift in Sources */,
+				07F3A0062671A41D00DCE13A /* AudioUnitManager.swift in Sources */,
 				07F3A00426719CD900DCE13A /* AUv3Intensifier.swift in Sources */,
 				07EA7ADA266E94D000759EFE /* IntensifierDSPKernelAdapter.mm in Sources */,
 			);
