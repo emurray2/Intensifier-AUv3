@@ -230,9 +230,9 @@ public:
             }
         }
         // Squelch any blowups once per cycle.
-        for (int channel = 0; channel < channelCount; ++channel) {
-            channelStates[channel].convertBadStateValuesToZero();
-        }
+//        for (int channel = 0; channel < channelCount; ++channel) {
+//            channelStates[channel].convertBadStateValuesToZero();
+//        }
     }
 private:
     std::vector<IntensifierState> channelStates;

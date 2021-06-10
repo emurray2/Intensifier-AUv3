@@ -64,7 +64,7 @@ class AUv3IntensifierParameters {
     }()
     var attackTimeParam: AUParameter = {
         let parameter =
-            AUParameterTree.createParameter(withIdentifier: "attackTimeAmount",
+            AUParameterTree.createParameter(withIdentifier: "attackTime",
                                             name: "Attack Time",
                                             address: AUv3IntensifierParam.attackTime.rawValue,
                                             min: 0.0,
@@ -83,7 +83,7 @@ class AUv3IntensifierParameters {
     }()
     var releaseTimeParam: AUParameter = {
         let parameter =
-            AUParameterTree.createParameter(withIdentifier: "releaseTimeAmount",
+            AUParameterTree.createParameter(withIdentifier: "releaseTime",
                                             name: "Release Time",
                                             address: AUv3IntensifierParam.releaseTime.rawValue,
                                             min: 0.0,
