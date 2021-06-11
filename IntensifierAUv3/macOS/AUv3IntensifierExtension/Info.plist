@@ -53,9 +53,9 @@
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.AudioUnit</string>
+		<string>com.apple.AudioUnit-UI</string>
 		<key>NSExtensionPrincipalClass</key>
-		<string>IntensifierAUv3Framework.AUv3IntensifierController</string>
+		<string>IntensifierAUv3Framework.AUv3IntensifierViewController</string>
 	</dict>
 </dict>
 </plist>

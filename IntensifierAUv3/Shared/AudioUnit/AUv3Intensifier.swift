@@ -24,8 +24,8 @@ public class AUv3Intensifier: AUAudioUnit {
                             busType: .output,
                             busses: [kernelAdapter.outputBus])
     }()
-    // The owning controller
-    weak var viewController: AUv3IntensifierController?
+    // The owning view controller
+    weak var viewController: AUv3IntensifierViewController?
 
     public override var inputBusses: AUAudioUnitBusArray {
         return inputBusArray
@@ -52,7 +52,7 @@ public class AUv3Intensifier: AUAudioUnit {
         releaseTime: AUValue,
         outputAmount: AUValue
     )] = [
-        (0.0, -10.0, 5.0, 20.0, 1.0, 0.0) // "Subtle"
+        (0.0, -29.0, 19.0, 149.0, 1.0, 6.0) // "Subtle"
     ]
 
     private var _currentPreset: AUAudioUnitPreset?
