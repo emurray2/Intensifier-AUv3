@@ -126,8 +126,6 @@
 		07E5202C2673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		07E5202D2673857E005D72A6 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		07E5202E2673857E005D72A6 /* style.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = style.scss; sourceTree = "<group>"; };
-		07E5202F2673857E005D72A6 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		07E520302673857E005D72A6 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		07E5204F26739F67005D72A6 /* angular.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = angular.min.js; sourceTree = "<group>"; };
 		07E5205026739F67005D72A6 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
 		07E5205126739F67005D72A6 /* path-data-polyfill.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "path-data-polyfill.js"; sourceTree = "<group>"; };
@@ -248,8 +246,6 @@
 				07E5200D2673857E005D72A6 /* newsrc */,
 				07E520172673857E005D72A6 /* LICENSE */,
 				07E520182673857E005D72A6 /* originalsrc */,
-				07E5202F2673857E005D72A6 /* .gitignore */,
-				07E520302673857E005D72A6 /* .gitattributes */,
 			);
 			path = "Intensifier-WebGUI";
 			sourceTree = "<group>";
