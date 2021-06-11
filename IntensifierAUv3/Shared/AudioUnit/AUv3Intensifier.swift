@@ -166,7 +166,23 @@ public class AUv3Intensifier: AUAudioUnit {
         return true
     }
 
-    // TODO: Setup view configurations
+    // MARK: View Configurations
+    public override func supportedViewConfigurations(_ availableViewConfigurations: [AUAudioUnitViewConfiguration]) -> IndexSet {
+        var indexSet = IndexSet()
+
+        let config = AUAudioUnitViewConfiguration(width: 0.0, height: 0.0, hostHasController: false)
+        for (_, _) in [config].enumerated() {
+
+            //let size = CGSize(width: config.width, height: config.height)
+            indexSet.insert(0)
+
+        }
+        return indexSet
+    }
+
+    public override func select(_ viewConfiguration: AUAudioUnitViewConfiguration) {
+        //viewController?.selectViewConfiguration(viewConfiguration)
+    }
 }
 
 extension FourCharCode {

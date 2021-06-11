@@ -25,8 +25,15 @@
 		079A36D22671561800DD518E /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 079A36D12671561800DD518E /* DSPKernel.mm */; };
 		079A36D42671563A00DD518E /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D32671563A00DD518E /* DSPKernel.hpp */; };
 		079A36D6267156B200DD518E /* IntensifierDSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D5267156B200DD518E /* IntensifierDSPKernel.hpp */; };
-		07E5200426731A5E005D72A6 /* AUv3IntensifierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E5200326731A5E005D72A6 /* AUv3IntensifierViewController.xib */; };
+		07B8759926741739001FE116 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B8759826741739001FE116 /* AudioUnit.framework */; };
 		07E5200B26732B97005D72A6 /* IntensifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5200A26732B97005D72A6 /* IntensifierView.swift */; };
+		07E5204A267385C6005D72A6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E5200F2673857E005D72A6 /* index.html */; };
+		07E5204B267385C6005D72A6 /* style.css.map in Resources */ = {isa = PBXBuildFile; fileRef = 07E520102673857E005D72A6 /* style.css.map */; };
+		07E5204C267385C6005D72A6 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E520112673857E005D72A6 /* script.js */; };
+		07E5204D267385C6005D72A6 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 07E520122673857E005D72A6 /* style.css */; };
+		07E5205226739F67005D72A6 /* angular.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E5204F26739F67005D72A6 /* angular.min.js */; };
+		07E5205326739F67005D72A6 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E5205026739F67005D72A6 /* jquery.min.js */; };
+		07E5205426739F67005D72A6 /* path-data-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E5205126739F67005D72A6 /* path-data-polyfill.js */; };
 		07EA7AC5266E8A0D00759EFE /* IntensifierAUv3Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7AC3266E8A0D00759EFE /* IntensifierAUv3Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07EA7ADA266E94D000759EFE /* IntensifierDSPKernelAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07EA7AD9266E94D000759EFE /* IntensifierDSPKernelAdapter.mm */; };
 		07EA7ADC266E958000759EFE /* IntensifierDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7ADB266E958000759EFE /* IntensifierDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,8 +100,37 @@
 		079A36D12671561800DD518E /* DSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPKernel.mm; sourceTree = "<group>"; };
 		079A36D32671563A00DD518E /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
 		079A36D5267156B200DD518E /* IntensifierDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IntensifierDSPKernel.hpp; sourceTree = "<group>"; };
-		07E5200326731A5E005D72A6 /* AUv3IntensifierViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AUv3IntensifierViewController.xib; sourceTree = "<group>"; };
+		07B8759826741739001FE116 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AudioUnit.framework; sourceTree = DEVELOPER_DIR; };
 		07E5200A26732B97005D72A6 /* IntensifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntensifierView.swift; sourceTree = "<group>"; };
+		07E5200F2673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		07E520102673857E005D72A6 /* style.css.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = style.css.map; sourceTree = "<group>"; };
+		07E520112673857E005D72A6 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		07E520122673857E005D72A6 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		07E520142673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		07E520152673857E005D72A6 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		07E520162673857E005D72A6 /* style.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = style.scss; sourceTree = "<group>"; };
+		07E520172673857E005D72A6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		07E5201B2673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		07E5201C2673857E005D72A6 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		07E5201D2673857E005D72A6 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		07E5201E2673857E005D72A6 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		07E5201F2673857E005D72A6 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		07E520212673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		07E520222673857E005D72A6 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		07E520232673857E005D72A6 /* style.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = style.scss; sourceTree = "<group>"; };
+		07E520262673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		07E520272673857E005D72A6 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		07E520282673857E005D72A6 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		07E520292673857E005D72A6 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		07E5202A2673857E005D72A6 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		07E5202C2673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		07E5202D2673857E005D72A6 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		07E5202E2673857E005D72A6 /* style.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = style.scss; sourceTree = "<group>"; };
+		07E5202F2673857E005D72A6 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		07E520302673857E005D72A6 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		07E5204F26739F67005D72A6 /* angular.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = angular.min.js; sourceTree = "<group>"; };
+		07E5205026739F67005D72A6 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
+		07E5205126739F67005D72A6 /* path-data-polyfill.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "path-data-polyfill.js"; sourceTree = "<group>"; };
 		07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IntensifierAUv3Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EA7AC3266E8A0D00759EFE /* IntensifierAUv3Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntensifierAUv3Framework.h; sourceTree = "<group>"; };
 		07EA7AC4266E8A0D00759EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B8759926741739001FE116 /* AudioUnit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +208,7 @@
 		0762E36426727E2C001CA5BC /* dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				07E5200C2673857E005D72A6 /* Intensifier-WebGUI */,
 				0762E36526727E2C001CA5BC /* DunneAudioKit */,
 			);
 			path = dependencies;
@@ -204,6 +242,122 @@
 			path = "User Interface";
 			sourceTree = "<group>";
 		};
+		07E5200C2673857E005D72A6 /* Intensifier-WebGUI */ = {
+			isa = PBXGroup;
+			children = (
+				07E5200D2673857E005D72A6 /* newsrc */,
+				07E520172673857E005D72A6 /* LICENSE */,
+				07E520182673857E005D72A6 /* originalsrc */,
+				07E5202F2673857E005D72A6 /* .gitignore */,
+				07E520302673857E005D72A6 /* .gitattributes */,
+			);
+			path = "Intensifier-WebGUI";
+			sourceTree = "<group>";
+		};
+		07E5200D2673857E005D72A6 /* newsrc */ = {
+			isa = PBXGroup;
+			children = (
+				07E5200E2673857E005D72A6 /* dist */,
+				07E520132673857E005D72A6 /* src */,
+			);
+			path = newsrc;
+			sourceTree = "<group>";
+		};
+		07E5200E2673857E005D72A6 /* dist */ = {
+			isa = PBXGroup;
+			children = (
+				07E5204F26739F67005D72A6 /* angular.min.js */,
+				07E5205026739F67005D72A6 /* jquery.min.js */,
+				07E5205126739F67005D72A6 /* path-data-polyfill.js */,
+				07E5200F2673857E005D72A6 /* index.html */,
+				07E520102673857E005D72A6 /* style.css.map */,
+				07E520112673857E005D72A6 /* script.js */,
+				07E520122673857E005D72A6 /* style.css */,
+			);
+			path = dist;
+			sourceTree = "<group>";
+		};
+		07E520132673857E005D72A6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				07E520142673857E005D72A6 /* index.html */,
+				07E520152673857E005D72A6 /* script.js */,
+				07E520162673857E005D72A6 /* style.scss */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		07E520182673857E005D72A6 /* originalsrc */ = {
+			isa = PBXGroup;
+			children = (
+				07E520192673857E005D72A6 /* profile-card */,
+				07E520242673857E005D72A6 /* animated-sine-wave-svg */,
+			);
+			path = originalsrc;
+			sourceTree = "<group>";
+		};
+		07E520192673857E005D72A6 /* profile-card */ = {
+			isa = PBXGroup;
+			children = (
+				07E5201A2673857E005D72A6 /* dist */,
+				07E5201E2673857E005D72A6 /* README.markdown */,
+				07E5201F2673857E005D72A6 /* license.txt */,
+				07E520202673857E005D72A6 /* src */,
+			);
+			path = "profile-card";
+			sourceTree = "<group>";
+		};
+		07E5201A2673857E005D72A6 /* dist */ = {
+			isa = PBXGroup;
+			children = (
+				07E5201B2673857E005D72A6 /* index.html */,
+				07E5201C2673857E005D72A6 /* script.js */,
+				07E5201D2673857E005D72A6 /* style.css */,
+			);
+			path = dist;
+			sourceTree = "<group>";
+		};
+		07E520202673857E005D72A6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				07E520212673857E005D72A6 /* index.html */,
+				07E520222673857E005D72A6 /* script.js */,
+				07E520232673857E005D72A6 /* style.scss */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		07E520242673857E005D72A6 /* animated-sine-wave-svg */ = {
+			isa = PBXGroup;
+			children = (
+				07E520252673857E005D72A6 /* dist */,
+				07E520292673857E005D72A6 /* README.markdown */,
+				07E5202A2673857E005D72A6 /* license.txt */,
+				07E5202B2673857E005D72A6 /* src */,
+			);
+			path = "animated-sine-wave-svg";
+			sourceTree = "<group>";
+		};
+		07E520252673857E005D72A6 /* dist */ = {
+			isa = PBXGroup;
+			children = (
+				07E520262673857E005D72A6 /* index.html */,
+				07E520272673857E005D72A6 /* script.js */,
+				07E520282673857E005D72A6 /* style.css */,
+			);
+			path = dist;
+			sourceTree = "<group>";
+		};
+		07E5202B2673857E005D72A6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				07E5202C2673857E005D72A6 /* index.html */,
+				07E5202D2673857E005D72A6 /* script.js */,
+				07E5202E2673857E005D72A6 /* style.scss */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		07EA7AB6266E8A0D00759EFE = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +385,6 @@
 				07EA7AC4266E8A0D00759EFE /* Info.plist */,
 				07EA7AC3266E8A0D00759EFE /* IntensifierAUv3Framework.h */,
 				0762E33E2671ACCA001CA5BC /* AUv3IntensifierControllerExtension.swift */,
-				07E5200326731A5E005D72A6 /* AUv3IntensifierViewController.xib */,
 			);
 			path = IntensifierAUv3Framework;
 			sourceTree = "<group>";
@@ -260,6 +413,7 @@
 		07EA7AD2266E928900759EFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07B8759826741739001FE116 /* AudioUnit.framework */,
 				07EA7AE3266E971B00759EFE /* AVFoundation.framework */,
 				07EA7AE1266E971000759EFE /* CoreAudioKit.framework */,
 				07EA7ADF266E970A00759EFE /* AudioToolbox.framework */,
@@ -419,7 +573,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E5200426731A5E005D72A6 /* AUv3IntensifierViewController.xib in Resources */,
+				07E5204A267385C6005D72A6 /* index.html in Resources */,
+				07E5205326739F67005D72A6 /* jquery.min.js in Resources */,
+				07E5204B267385C6005D72A6 /* style.css.map in Resources */,
+				07E5205426739F67005D72A6 /* path-data-polyfill.js in Resources */,
+				07E5205226739F67005D72A6 /* angular.min.js in Resources */,
+				07E5204C267385C6005D72A6 /* script.js in Resources */,
+				07E5204D267385C6005D72A6 /* style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
