@@ -1,0 +1,35 @@
+<div class="app-container" ng-app="waveApp" ng-controller="waveCtrl">
+	<div class="playback-controls">
+		<div class="button back" ng-click="stepBack()">
+			<svg width="60" height="40">
+				<path stroke="white" stroke-width="2" stroke-linecap="round" fill="none" d="M18,20 l8,-8 M18,20 h22 M18,20 l8,8" />
+			</svg>
+		</div>
+		<div class="button play" ng-click="togglePlay()">
+			<svg width="60" height="40">
+				<path ng-show="!play" stroke="none" fill="white" d="M42,20 l-18,-10 v20 z" />
+				<path ng-show="play" stroke="white" fill="none" stroke-width="4" d="M25,11 v18 M35,11 v18" />
+			</svg>
+		</div>
+		<div class="button forward" ng-click="stepForward()">
+			<svg width="60" height="40">
+				<path stroke="white" stroke-width="2" stroke-linecap="round" fill="none" d="M42,20 l-8,-8 M42,20 h-22 M42,20 l-8,8" />
+			</svg>
+		</div>
+	</div>
+	<div class="graph-container">
+		<svg class="svg" width="300" height="300" ng-style="{'transform': 'rotate(' + rotation + 'deg)'}">
+			<path class="sine-wave-reference" ng-show="shadow" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none" d="M0,150"/>
+			<path class="sine-wave" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" d="M0,150"/>
+		</svg>
+	</div>
+	<div class="controls-container">
+		<div class="slider frequency-slider" slider label="Frequency" minvalue="0" maxvalue="10" control="frequency" decimals="2" update="updateGraph()"></div>
+		<div class="slider amplitude-slider" slider label="Amplitude" minvalue="0" maxvalue="7" control="amplitude" decimals="2" update="updateGraph()"></div>
+		<div class="slider framerate-slider" slider label="Frame Rate" minvalue="5" maxvalue="60" control="framerate" decimals="2" update="updateGraph()"></div>
+		<div class="slider speed-slider" slider label="Speed" minvalue="0" maxvalue="10" control="increment" decimals="2" update="updateGraph()"></div>
+		<div class="slider rotation-slider" slider label="Rotation" minvalue="0" maxvalue="360" control="rotation" decimals="0" update="updateGraph()"></div>
+		<div class="reset" ng-click="reset(); updateGraph();">reset</div>
+		<div class="toggle shadow-toggle" toggle property="shadow" label="Shadow"></div>
+	</div>
+</div>

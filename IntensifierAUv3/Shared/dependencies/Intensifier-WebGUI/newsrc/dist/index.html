@@ -1,0 +1,38 @@
+<!---see originalsrc folder for license*/--->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Intensifier AUv3</title>
+  <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!---Html src goes here-->
+  <div class="wrapper">
+    <div class="profile-card js-profile-card">
+        <div class="profile-card__cnt js-profile-cnt">
+            <div class="profile-card__name">Intensifier AUv3</div>
+            <div class="app-container" ng-app="IntensifierAUv3" ng-controller="IntensifierCtrl">
+              <div class="controls-container">
+                <div class="slider frequency-slider" slider label="Input Amount" minvalue="-40" maxvalue="30" control="frequency" decimals="2" update="updateGraph()"></div>
+                <div class="slider amplitude-slider" slider label="Attack Amount" minvalue="-40" maxvalue="30" control="amplitude" decimals="2" update="updateGraph()"></div>
+                <div class="slider framerate-slider" slider label="Release Amount" minvalue="-40" maxvalue="30" control="framerate" decimals="2" update="updateGraph()"></div>
+                <div class="slider speed-slider" slider label="Attack Time" minvalue="0" maxvalue="500" control="increment" decimals="2" update="updateGraph()"></div>
+                <div class="slider rotation-slider" slider label="Release Time" minvalue="0" maxvalue="5" control="rotation" decimals="2" update="updateGraph()"></div>
+                <div class="slider output-slider" slider label="Output Amount" minvalue="-40" maxvalue="30" control="output" decimals="2" update="updateGraph()"></div>
+                <div class="reset" ng-click="reset(); updateGraph();">reset</div>
+                <div class="toggle shadow-toggle" toggle property="shadow" label="On/Off"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!---End Html src-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+  <script src='https://jaromvogel.com/js/lib/path-data-polyfill.js'></script>
+  <script  src="./script.js"></script>
+</body>
+</html>
