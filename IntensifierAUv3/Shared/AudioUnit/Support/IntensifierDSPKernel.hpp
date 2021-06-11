@@ -445,7 +445,6 @@ public:
 
     void init(int channelCount, double inSampleRate)
     {
-        printf("Hello");
         channelStates.resize(channelCount);
 
         sampleRate = float(inSampleRate);
@@ -473,7 +472,6 @@ public:
     }
     void deinit()
     {
-        printf("Bye");
         rmsaverage_destroy(&RMSAverage1);
         rmsaverage_destroy(&RMSAverage2);
         slide_destroy(&attackSlideUp);
@@ -520,7 +518,7 @@ public:
     void setParameter(AUParameterAddress address, AUValue value) {
         switch (address) {
             case IntensifierParamInputAmount:
-                inputAmountRamper.setUIValue(clamp(value, -40.0f, 30.0f));
+                inputAmountRamper.setUIValue(clamp(value, -40.0f, 15.0f));
                 break;
             case IntensifierParamAttackAmount:
                 attackAmountRamper.setUIValue(clamp(value, -40.0f, 30.0f));
@@ -535,7 +533,7 @@ public:
                 releaseTimeRamper.setUIValue(clamp(value, 0.0f, 5.0f));
                 break;
             case IntensifierParamOutputAmount:
-                outputAmountRamper.setUIValue(clamp(value, -40.0f, 30.0f));
+                outputAmountRamper.setUIValue(clamp(value, -40.0f, 15.0f));
                 break;
         }
     }
@@ -564,7 +562,7 @@ public:
     {
         switch (address) {
             case IntensifierParamInputAmount:
-                inputAmountRamper.startRamp(clamp(value, -40.0f, 30.0f), duration);
+                inputAmountRamper.startRamp(clamp(value, -40.0f, 15.0f), duration);
                 break;
             case IntensifierParamAttackAmount:
                 attackAmountRamper.startRamp(clamp(value, -40.0f, 30.0f), duration);
@@ -579,7 +577,7 @@ public:
                 releaseTimeRamper.startRamp(clamp(value, 0.0f, 5.0f), duration);
                 break;
             case IntensifierParamOutputAmount:
-                outputAmountRamper.startRamp(clamp(value, -40.0f, 30.0f), duration);
+                outputAmountRamper.startRamp(clamp(value, -40.0f, 15.0f), duration);
                 break;
         }
     }
