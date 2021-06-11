@@ -17,6 +17,10 @@
 		0762E35A2671BEA7001CA5BC /* AUv3IntensifierExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0762E31D2671ABED001CA5BC /* AUv3IntensifierExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0762E35E2671BEF4001CA5BC /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; };
 		0762E35F2671BEF4001CA5BC /* IntensifierAUv3Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0762E36B26727E2C001CA5BC /* AdjustableDelayLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0762E36626727E2C001CA5BC /* AdjustableDelayLine.cpp */; };
+		0762E36D26727E2C001CA5BC /* AdjustableDelayLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0762E36826727E2C001CA5BC /* AdjustableDelayLine.h */; };
+		0762E3702672B050001CA5BC /* StereoDelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 0762E36A26727E2C001CA5BC /* StereoDelay.h */; };
+		0762E3712672B087001CA5BC /* StereoDelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0762E36926727E2C001CA5BC /* StereoDelay.cpp */; };
 		079A36D02671559300DD518E /* ParameterRamper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36CF2671559300DD518E /* ParameterRamper.hpp */; };
 		079A36D22671561800DD518E /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 079A36D12671561800DD518E /* DSPKernel.mm */; };
 		079A36D42671563A00DD518E /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D32671563A00DD518E /* DSPKernel.hpp */; };
@@ -79,6 +83,11 @@
 		0762E3522671BE56001CA5BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0762E3542671BE56001CA5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0762E3552671BE56001CA5BC /* Intensifier_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Intensifier_macOS.entitlements; sourceTree = "<group>"; };
+		0762E36626727E2C001CA5BC /* AdjustableDelayLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustableDelayLine.cpp; sourceTree = "<group>"; };
+		0762E36726727E2C001CA5BC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0762E36826727E2C001CA5BC /* AdjustableDelayLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustableDelayLine.h; sourceTree = "<group>"; };
+		0762E36926727E2C001CA5BC /* StereoDelay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StereoDelay.cpp; sourceTree = "<group>"; };
+		0762E36A26727E2C001CA5BC /* StereoDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StereoDelay.h; sourceTree = "<group>"; };
 		079A36CF2671559300DD518E /* ParameterRamper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ParameterRamper.hpp; sourceTree = "<group>"; };
 		079A36D12671561800DD518E /* DSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPKernel.mm; sourceTree = "<group>"; };
 		079A36D32671563A00DD518E /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
@@ -157,6 +166,26 @@
 			path = "Intensifier macOS";
 			sourceTree = "<group>";
 		};
+		0762E36426727E2C001CA5BC /* dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				0762E36526727E2C001CA5BC /* DunneAudioKit */,
+			);
+			path = dependencies;
+			sourceTree = "<group>";
+		};
+		0762E36526727E2C001CA5BC /* DunneAudioKit */ = {
+			isa = PBXGroup;
+			children = (
+				0762E36626727E2C001CA5BC /* AdjustableDelayLine.cpp */,
+				0762E36726727E2C001CA5BC /* LICENSE */,
+				0762E36826727E2C001CA5BC /* AdjustableDelayLine.h */,
+				0762E36926727E2C001CA5BC /* StereoDelay.cpp */,
+				0762E36A26727E2C001CA5BC /* StereoDelay.h */,
+			);
+			path = DunneAudioKit;
+			sourceTree = "<group>";
+		};
 		07EA7AB6266E8A0D00759EFE = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +220,7 @@
 		07EA7ACC266E908700759EFE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0762E36426727E2C001CA5BC /* dependencies */,
 				07F3A0052671A41D00DCE13A /* AudioUnitManager.swift */,
 				07F39FFE267180F600DCE13A /* AUv3IntensifierController.swift */,
 				07EA7ACD266E90EB00759EFE /* AudioUnit */,
@@ -240,9 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				07EA7ADC266E958000759EFE /* IntensifierDSPKernelAdapter.h in Headers */,
+				0762E36D26727E2C001CA5BC /* AdjustableDelayLine.h in Headers */,
+				0762E3702672B050001CA5BC /* StereoDelay.h in Headers */,
 				079A36D02671559300DD518E /* ParameterRamper.hpp in Headers */,
-				07EA7AE6266E974000759EFE /* BufferedAudioBus.hpp in Headers */,
 				07EA7AC5266E8A0D00759EFE /* IntensifierAUv3Framework.h in Headers */,
+				07EA7AE6266E974000759EFE /* BufferedAudioBus.hpp in Headers */,
 				079A36D6267156B200DD518E /* IntensifierDSPKernel.hpp in Headers */,
 				079A36D42671563A00DD518E /* DSPKernel.hpp in Headers */,
 			);
@@ -395,6 +427,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0762E3712672B087001CA5BC /* StereoDelay.cpp in Sources */,
+				0762E36B26727E2C001CA5BC /* AdjustableDelayLine.cpp in Sources */,
 				079A36D22671561800DD518E /* DSPKernel.mm in Sources */,
 				07F3A002267188C000DCE13A /* AUv3IntensifierParameters.swift in Sources */,
 				07F39FFF267180F600DCE13A /* AUv3IntensifierController.swift in Sources */,

@@ -64,6 +64,7 @@
 
 - (void)deallocateRenderResources {
     _inputBus.deallocateRenderResources();
+    _kernel.deinit();
 }
 
 #pragma mark - AUAudioUnit (AUAudioUnitImplementation)
