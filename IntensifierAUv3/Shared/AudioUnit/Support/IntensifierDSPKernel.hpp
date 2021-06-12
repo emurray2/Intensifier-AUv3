@@ -472,12 +472,6 @@ public:
     }
     void deinit()
     {
-        rmsaverage_destroy(&RMSAverage1);
-        rmsaverage_destroy(&RMSAverage2);
-        slide_destroy(&attackSlideUp);
-        slide_destroy(&attackSlideDown);
-        slide_destroy(&releaseSlideDown);
-        delay1.deinit();
     }
     void reset()
     {

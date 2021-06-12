@@ -44,18 +44,18 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         super.init(coder: coder)
     }
     public override func loadView() {
-        view = NSView(frame: CGRect(x:0, y: 0, width: 1040.0, height: 650.0))
-        view.setBoundsSize(NSSize(width: 1040.0, height: 650.0))
+        view = NSView(frame: CGRect(x:0, y: 0, width: 800.0, height: 500.0))
+        view.setBoundsSize(NSSize(width: 800.0, height: 500.0))
     }
     public override func viewWillAppear() {
-        view.window!.maxSize = NSSize(width: 1040.0, height: 650.0)
-        view.window!.minSize = NSSize(width: 1040.0, height: 650.0)
-        view.window!.maxFullScreenContentSize = NSSize(width: 1040.0, height: 650.0)
-        view.window!.minFullScreenContentSize = NSSize(width: 1040.0, height: 650.0)
     }
     public override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window!.styleMask.remove(.resizable)
+        view.window!.maxSize = NSSize(width: 800.0, height: 500.0)
+        view.window!.minSize = NSSize(width: 800.0, height: 500.0)
+        view.window!.maxFullScreenContentSize = NSSize(width: 800.0, height: 500.0)
+        view.window!.minFullScreenContentSize = NSSize(width: 800.0, height: 500.0)
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,8 +63,13 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         let resURL = Bundle(for: type(of: self)).resourceURL?.absoluteURL
         let myURL = Bundle(for: type(of: self)).url(forResource: "index", withExtension: "html")
         let webViewConfiguration = WKWebViewConfiguration()
-        let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 1040.0, height: 650.0), configuration: webViewConfiguration)
+        let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 800.0, height: 500.0), configuration: webViewConfiguration)
         webView.loadFileURL(myURL!, allowingReadAccessTo: resURL!)
+        if #available(macOSApplicationExtension 11.0, *) {
+            webView.pageZoom = 0.75
+        } else {
+            // Fallback on earlier versions
+        }
         view.addSubview(webView)
         connectViewToAU()
     }

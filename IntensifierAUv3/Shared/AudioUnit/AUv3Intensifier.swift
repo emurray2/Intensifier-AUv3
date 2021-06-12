@@ -172,11 +172,9 @@ public class AUv3Intensifier: AUAudioUnit {
 
         let config = AUAudioUnitViewConfiguration(width: 0.0, height: 0.0, hostHasController: false)
         for (_, _) in [config].enumerated() {
-
-            //let size = CGSize(width: config.width, height: config.height)
             indexSet.insert(0)
-
         }
+        select(config)
         return indexSet
     }
 
