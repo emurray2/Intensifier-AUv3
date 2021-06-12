@@ -66,6 +66,7 @@ app.directive('slider', function () {
 				positionHandle(position);
 				var newvalue = (position / sliderbar[0].offsetWidth) * (scope.maxvalue - scope.minvalue) + scope.minvalue;
 				scope.control = newvalue;
+				window.webkit.messageHandlers.iosListener.postMessage(scope.control);
 				scope.update();
 				scope.$apply();
 			});
@@ -75,6 +76,7 @@ app.directive('slider', function () {
 					positionHandle(position);
 					var newvalue = (position / sliderbar[0].offsetWidth) * (scope.maxvalue - scope.minvalue) + scope.minvalue;
 					scope.control = newvalue;
+					window.webkit.messageHandlers.iosListener.postMessage(scope.control);
 					scope.update();
 					scope.$apply();
 				}

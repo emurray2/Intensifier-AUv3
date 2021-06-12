@@ -12,6 +12,7 @@ public class AUv3IntensifierController: NSObject {
 
 public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler, NSWindowDelegate {
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print("message: \(message.body)")
     }
     private var viewConfig: AUAudioUnitViewConfiguration!
 
@@ -63,6 +64,7 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         let resURL = Bundle(for: type(of: self)).resourceURL?.absoluteURL
         let myURL = Bundle(for: type(of: self)).url(forResource: "index", withExtension: "html")
         let webViewConfiguration = WKWebViewConfiguration()
+        webViewConfiguration.userContentController.add(self, name: "iosListener")
         let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 800.0, height: 500.0), configuration: webViewConfiguration)
         webView.loadFileURL(myURL!, allowingReadAccessTo: resURL!)
         if #available(macOSApplicationExtension 11.0, *) {
