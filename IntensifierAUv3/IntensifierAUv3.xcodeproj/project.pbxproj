@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071BC8982675168000A0792D /* normalize.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 071BC8972675168000A0792D /* normalize.min.css */; };
 		0762E33D2671AC85001CA5BC /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; };
 		0762E33F2671ACCA001CA5BC /* AUv3IntensifierControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E33E2671ACCA001CA5BC /* AUv3IntensifierControllerExtension.swift */; };
 		0762E3432671B8B4001CA5BC /* AUv3IntensifierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E3422671B8B4001CA5BC /* AUv3IntensifierExtension.swift */; };
@@ -25,7 +26,6 @@
 		079A36D22671561800DD518E /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 079A36D12671561800DD518E /* DSPKernel.mm */; };
 		079A36D42671563A00DD518E /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D32671563A00DD518E /* DSPKernel.hpp */; };
 		079A36D6267156B200DD518E /* IntensifierDSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D5267156B200DD518E /* IntensifierDSPKernel.hpp */; };
-		07E5200B26732B97005D72A6 /* IntensifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5200A26732B97005D72A6 /* IntensifierView.swift */; };
 		07E5204A267385C6005D72A6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E5200F2673857E005D72A6 /* index.html */; };
 		07E5204B267385C6005D72A6 /* style.css.map in Resources */ = {isa = PBXBuildFile; fileRef = 07E520102673857E005D72A6 /* style.css.map */; };
 		07E5204C267385C6005D72A6 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E520112673857E005D72A6 /* script.js */; };
@@ -78,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		071BC8972675168000A0792D /* normalize.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = normalize.min.css; sourceTree = "<group>"; };
 		0762E31D2671ABED001CA5BC /* AUv3IntensifierExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AUv3IntensifierExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0762E33E2671ACCA001CA5BC /* AUv3IntensifierControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierControllerExtension.swift; sourceTree = "<group>"; };
 		0762E3402671B482001CA5BC /* AUv3IntensifierExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUv3IntensifierExtension.entitlements; sourceTree = "<group>"; };
@@ -100,7 +101,6 @@
 		079A36D32671563A00DD518E /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
 		079A36D5267156B200DD518E /* IntensifierDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IntensifierDSPKernel.hpp; sourceTree = "<group>"; };
 		07B8759826741739001FE116 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AudioUnit.framework; sourceTree = DEVELOPER_DIR; };
-		07E5200A26732B97005D72A6 /* IntensifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntensifierView.swift; sourceTree = "<group>"; };
 		07E5200F2673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		07E520102673857E005D72A6 /* style.css.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = style.css.map; sourceTree = "<group>"; };
 		07E520112673857E005D72A6 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
@@ -222,22 +222,6 @@
 			path = DunneAudioKit;
 			sourceTree = "<group>";
 		};
-		07E520052673265F005D72A6 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				07E5200926732B73005D72A6 /* User Interface */,
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
-		07E5200926732B73005D72A6 /* User Interface */ = {
-			isa = PBXGroup;
-			children = (
-				07E5200A26732B97005D72A6 /* IntensifierView.swift */,
-			);
-			path = "User Interface";
-			sourceTree = "<group>";
-		};
 		07E5200C2673857E005D72A6 /* Intensifier-WebGUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +244,7 @@
 		07E5200E2673857E005D72A6 /* dist */ = {
 			isa = PBXGroup;
 			children = (
+				071BC8972675168000A0792D /* normalize.min.css */,
 				07E5204F26739F67005D72A6 /* angular.min.js */,
 				07E5205026739F67005D72A6 /* jquery.min.js */,
 				07E5205126739F67005D72A6 /* path-data-polyfill.js */,
@@ -389,7 +374,6 @@
 				07F39FFE267180F600DCE13A /* AUv3IntensifierViewController.swift */,
 				0762E36426727E2C001CA5BC /* dependencies */,
 				07EA7ACD266E90EB00759EFE /* AudioUnit */,
-				07E520052673265F005D72A6 /* Support */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -570,6 +554,7 @@
 				07E5204A267385C6005D72A6 /* index.html in Resources */,
 				07E5205326739F67005D72A6 /* jquery.min.js in Resources */,
 				07E5204B267385C6005D72A6 /* style.css.map in Resources */,
+				071BC8982675168000A0792D /* normalize.min.css in Resources */,
 				07E5205426739F67005D72A6 /* path-data-polyfill.js in Resources */,
 				07E5205226739F67005D72A6 /* angular.min.js in Resources */,
 				07E5204C267385C6005D72A6 /* script.js in Resources */,
@@ -604,7 +589,6 @@
 				0762E3712672B087001CA5BC /* StereoDelay.cpp in Sources */,
 				0762E36B26727E2C001CA5BC /* AdjustableDelayLine.cpp in Sources */,
 				079A36D22671561800DD518E /* DSPKernel.mm in Sources */,
-				07E5200B26732B97005D72A6 /* IntensifierView.swift in Sources */,
 				07F3A002267188C000DCE13A /* AUv3IntensifierParameters.swift in Sources */,
 				07F39FFF267180F600DCE13A /* AUv3IntensifierViewController.swift in Sources */,
 				07F3A00426719CD900DCE13A /* AUv3Intensifier.swift in Sources */,
