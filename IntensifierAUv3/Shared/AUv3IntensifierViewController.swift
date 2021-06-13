@@ -18,6 +18,8 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
 
     var observer: NSKeyValueObservation?
 
+    var webView: WKWebView!
+
     var needsConnection = true
     public var audioUnitCreated: AUv3Intensifier? {
         didSet {
@@ -37,35 +39,26 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         super.init(coder: coder)
     }
     public override func loadView() {
-        view = NSView(frame: CGRect(x:0, y: 0, width: 800.0, height: 500.0))
-        view.setBoundsSize(NSSize(width: 800.0, height: 500.0))
-    }
-    public override func viewWillAppear() {
-    }
-    public override func viewDidAppear() {
-        super.viewDidAppear()
-        self.view.window!.styleMask.remove(.resizable)
-        view.window!.maxSize = NSSize(width: 800.0, height: 500.0)
-        view.window!.minSize = NSSize(width: 800.0, height: 500.0)
-        view.window!.maxFullScreenContentSize = NSSize(width: 800.0, height: 500.0)
-        view.window!.minFullScreenContentSize = NSSize(width: 800.0, height: 500.0)
-    }
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        guard audioUnitCreated != nil else { return }
         let resURL = Bundle(for: Swift.type(of: self)).resourceURL?.absoluteURL
         let myURL = Bundle(for: Swift.type(of: self)).url(forResource: "index", withExtension: "html")
         let webViewConfiguration = WKWebViewConfiguration()
         webViewConfiguration.userContentController.add(self, name: "typeListener")
         webViewConfiguration.userContentController.add(self, name: "valueListener")
-        let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 800.0, height: 500.0), configuration: webViewConfiguration)
+        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 800.0, height: 500.0), configuration: webViewConfiguration)
         webView.loadFileURL(myURL!, allowingReadAccessTo: resURL!)
-        if #available(macOSApplicationExtension 11.0, *) {
-            webView.pageZoom = 0.75
-        } else {
-            // Fallback on earlier versions
-        }
-        view.addSubview(webView)
+        webView.enclosingScrollView?.hasVerticalScroller = false
+        webView.enclosingScrollView?.hasHorizontalScroller = false
+        view = webView
+    }
+    public override func viewWillAppear() {
+    }
+    public override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.delegate = self
+    }
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        guard audioUnitCreated != nil else { return }
         connectViewToAU()
     }
     private func connectViewToAU() {
@@ -129,27 +122,9 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
             }
         }
     }
-}
-
-public extension NSView {
-    func pinToSuperviewEdges() {
-        guard let superview = superview else { return }
-        translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: superview.topAnchor),
-            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
-            bottomAnchor.constraint(equalTo: superview.bottomAnchor),
-            trailingAnchor.constraint(equalTo: superview.trailingAnchor)
-        ])
-    }
-
-    func setBorder(color: NSColor, width: CGFloat) {
-        #if os(iOS)
-        layer.borderColor = color.cgColor
-        layer.borderWidth = CGFloat(width)
-        #elseif os(macOS)
-        layer?.borderColor = color.cgColor
-        layer?.borderWidth = CGFloat(width)
-        #endif
+    public func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
+        webView.enclosingScrollView?.setFrameSize(frameSize)
+        return frameSize
     }
 }
+
