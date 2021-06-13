@@ -649,8 +649,8 @@ public:
                 float *out = (float*)outBufferListPtr->mBuffers[channel].mData + frameOffset;
                 // convert decibels to amplitude
                 *out = (inputSample * pow(10., inputAmount / 20.0));
-                compute_attackLR(out, tmpAttackOut, RMSAverage1, attackSlideUp, attackSlideDown);
-                compute_releaseLR(out, tmpReleaseOut, RMSAverage2, releaseSlideDown);
+                compute_attackLR(in, tmpAttackOut, RMSAverage1, attackSlideUp, attackSlideDown);
+                compute_releaseLR(in, tmpReleaseOut, RMSAverage2, releaseSlideDown);
                 *tmpAttackOut = *tmpAttackOut * attackA;
                 *tmpReleaseOut = *tmpReleaseOut * releaseA;
                 // mix release and attack
