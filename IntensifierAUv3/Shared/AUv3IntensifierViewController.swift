@@ -1,19 +1,7 @@
 import CoreAudioKit
 import WebKit
-public class AUv3IntensifierController: NSObject {
-    public var audioUnitCreated: AUv3Intensifier? {
-        didSet {
-            //audioUnitCreated?.viewController = self
-        }
-    }
-    public func beginRequest(with context: NSExtensionContext) {
-    }
-}
 
 public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler, NSWindowDelegate {
-    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        print("message: \(message.body)")
-    }
     private var viewConfig: AUAudioUnitViewConfiguration!
 
     private var inputAmountParameter: AUParameter!
@@ -23,6 +11,10 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
     private var releaseTimeParameter: AUParameter!
     private var outputAmountParameter: AUParameter!
     private var parameterObserverToken: AUParameterObserverToken?
+
+    // Variables for the Javascript Messages
+    var type = ""
+    var value: Float = 0
 
     var observer: NSKeyValueObservation?
 
@@ -39,7 +31,7 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
     }
     public override init(nibName: NSNib.Name?, bundle: Bundle?) {
         // Pass a reference to the owning framework bundle
-        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+        super.init(nibName: nil, bundle: Bundle(for: Swift.type(of: self)))
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -61,10 +53,11 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
     public override func viewDidLoad() {
         super.viewDidLoad()
         guard audioUnitCreated != nil else { return }
-        let resURL = Bundle(for: type(of: self)).resourceURL?.absoluteURL
-        let myURL = Bundle(for: type(of: self)).url(forResource: "index", withExtension: "html")
+        let resURL = Bundle(for: Swift.type(of: self)).resourceURL?.absoluteURL
+        let myURL = Bundle(for: Swift.type(of: self)).url(forResource: "index", withExtension: "html")
         let webViewConfiguration = WKWebViewConfiguration()
-        webViewConfiguration.userContentController.add(self, name: "iosListener")
+        webViewConfiguration.userContentController.add(self, name: "typeListener")
+        webViewConfiguration.userContentController.add(self, name: "valueListener")
         let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 800.0, height: 500.0), configuration: webViewConfiguration)
         webView.loadFileURL(myURL!, allowingReadAccessTo: resURL!)
         if #available(macOSApplicationExtension 11.0, *) {
@@ -96,44 +89,8 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         releaseTimeParameter = releaseTime
         outputAmountParameter = outputAmount
 
-        // Observe major state changes like a user selecting a user preset.
-        observer = audioUnitCreated?.observe(\.allParameterValues) { object, change in
-            DispatchQueue.main.async {
-                //self.updateUI()
-            }
-        }
-
-        // Observe value changes made to the cutoff and resonance parameters.
-        parameterObserverToken =
-            paramTree.token(byAddingParameterObserver: { [weak self] address, value in
-                guard self != nil else { return }
-
-                // This closure is being called by an arbitrary queue. Ensure
-                // all UI updates are dispatched back to the main thread.
-                if [inputAmount.address,
-                    attackAmount.address,
-                    releaseAmount.address,
-                    attackTime.address,
-                    releaseTime.address,
-                    outputAmount.address].contains(address) {
-                    DispatchQueue.main.async {
-                        //self.updateUI()
-                    }
-                }
-            })
-
         // Indicate the view and AU are connected
         needsConnection = false
-
-        // Sync UI with parameter state
-        //updateUI()
-    }
-    // MARK: View Configuration Selection
-
-    public func toggleViewConfiguration() {
-        // Let the audio unit call selectViewConfiguration instead of calling
-        // it directly to ensure validate the audio unit's behavior.
-        //audioUnitCreated?.select(viewConfig == expanded ? compact : expanded)
     }
     func performOnMain(_ operation: @escaping () -> Void) {
         if Thread.isMainThread {
@@ -141,6 +98,34 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         } else {
             DispatchQueue.main.async {
                 operation()
+            }
+        }
+    }
+    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        if message.name == "typeListener" {
+            let stringToGet = message.body as? NSString
+            type = stringToGet?.substring(from: 0) ?? ""
+        }
+        if message.name == "valueListener" {
+            let valueToGet = message.body as? NSNumber
+            value = valueToGet?.floatValue ?? 0
+            if type != "" {
+                switch type {
+                case "Input Amount":
+                inputAmountParameter.setValue(value, originator: nil, atHostTime: 0, eventType: .touch)
+                case "Attack Amount":
+                attackAmountParameter.setValue(value, originator: nil, atHostTime: 0, eventType: .touch)
+                case "Release Amount":
+                releaseAmountParameter.setValue(value, originator: nil, atHostTime: 0, eventType: .touch)
+                case "Attack Time":
+                attackTimeParameter.setValue(value, originator: nil, atHostTime: 0, eventType: .touch)
+                case "Release Time":
+                releaseTimeParameter.setValue(value, originator: nil, atHostTime: 0, eventType: .touch)
+                case "Output Amount":
+                outputAmountParameter.setValue(value, originator: nil, atHostTime: 0, eventType: .touch)
+                default:
+                    break
+                }
             }
         }
     }

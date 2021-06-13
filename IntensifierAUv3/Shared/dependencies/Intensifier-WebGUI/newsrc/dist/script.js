@@ -66,7 +66,8 @@ app.directive('slider', function () {
 				positionHandle(position);
 				var newvalue = (position / sliderbar[0].offsetWidth) * (scope.maxvalue - scope.minvalue) + scope.minvalue;
 				scope.control = newvalue;
-				window.webkit.messageHandlers.iosListener.postMessage(scope.control);
+				window.webkit.messageHandlers.typeListener.postMessage(handle[0].parentElement.attributes[2].nodeValue);
+                window.webkit.messageHandlers.valueListener.postMessage(scope.control);
 				scope.update();
 				scope.$apply();
 			});
@@ -76,7 +77,8 @@ app.directive('slider', function () {
 					positionHandle(position);
 					var newvalue = (position / sliderbar[0].offsetWidth) * (scope.maxvalue - scope.minvalue) + scope.minvalue;
 					scope.control = newvalue;
-					window.webkit.messageHandlers.iosListener.postMessage(scope.control);
+					window.webkit.messageHandlers.typeListener.postMessage(handle[0].parentElement.attributes[2].nodeValue);
+                    window.webkit.messageHandlers.valueListener.postMessage(scope.control);
 					scope.update();
 					scope.$apply();
 				}
