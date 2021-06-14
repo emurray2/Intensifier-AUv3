@@ -46,19 +46,16 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         webViewConfiguration.userContentController.add(self, name: "valueListener")
         webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 800.0, height: 500.0), configuration: webViewConfiguration)
         webView.loadFileURL(myURL!, allowingReadAccessTo: resURL!)
-        webView.enclosingScrollView?.hasVerticalScroller = false
-        webView.enclosingScrollView?.hasHorizontalScroller = false
         view = webView
-    }
-    public override func viewWillAppear() {
     }
     public override func viewDidAppear() {
         super.viewDidAppear()
-        self.view.window?.delegate = self
+        if view.window!.frame.size.height < 373.0 {
+            view.setFrameSize(NSSize(width: 2 * view.window!.frame.size.width, height: 2 * view.window!.frame.size.height))
+        }
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
-        guard audioUnitCreated != nil else { return }
         connectViewToAU()
     }
     private func connectViewToAU() {
@@ -121,10 +118,6 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
                 }
             }
         }
-    }
-    public func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
-        webView.enclosingScrollView?.setFrameSize(frameSize)
-        return frameSize
     }
 }
 
