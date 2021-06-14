@@ -81,6 +81,8 @@
 		071BC8972675168000A0792D /* normalize.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = normalize.min.css; sourceTree = "<group>"; };
 		072E3AAF2677054600B641CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		072E3AB12677114100B641CE /* AUv3IntensifierViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewControllerExtension.swift; sourceTree = "<group>"; };
+		072E3AB42677D6AC00B641CE /* IntensifierAUv3Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntensifierAUv3Framework.h; sourceTree = "<group>"; };
+		072E3AB52677D77B00B641CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0762E31D2671ABED001CA5BC /* AUv3IntensifierExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AUv3IntensifierExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0762E33E2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewControllerExtension.swift; sourceTree = "<group>"; };
 		0762E3402671B482001CA5BC /* AUv3IntensifierExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUv3IntensifierExtension.entitlements; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		072E3AAD2677044400B641CE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				072E3AB32677D68400B641CE /* IntensifierAUv3Framework */,
 				072E3AAE2677052300B641CE /* AUv3IntensifierExtension */,
 			);
 			path = iOS;
@@ -186,6 +189,15 @@
 				072E3AB12677114100B641CE /* AUv3IntensifierViewControllerExtension.swift */,
 			);
 			path = AUv3IntensifierExtension;
+			sourceTree = "<group>";
+		};
+		072E3AB32677D68400B641CE /* IntensifierAUv3Framework */ = {
+			isa = PBXGroup;
+			children = (
+				072E3AB52677D77B00B641CE /* Info.plist */,
+				072E3AB42677D6AC00B641CE /* IntensifierAUv3Framework.h */,
+			);
+			path = IntensifierAUv3Framework;
 			sourceTree = "<group>";
 		};
 		0762E31E2671ABED001CA5BC /* macOS */ = {

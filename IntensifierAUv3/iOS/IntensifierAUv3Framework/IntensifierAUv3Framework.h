@@ -1,6 +1,6 @@
-#import <Cocoa/Cocoa.h>
-FOUNDATION_EXPORT double IntensifierAUv3Framework_macOSVersionNumber;
-FOUNDATION_EXPORT const unsigned char IntensifierAUv3Framework_macOSVersionString[];
+#import <UIKit/UIKit.h>
+FOUNDATION_EXPORT double IntensifierAUv3Framework_iOSVersionNumber;
+FOUNDATION_EXPORT const unsigned char IntensifierAUv3Framework_iOSVersionString[];
 
 // In this header, you should import all the public headers of your framework
 #import <IntensifierAUv3Framework/IntensifierDSPKernelAdapter.h>
