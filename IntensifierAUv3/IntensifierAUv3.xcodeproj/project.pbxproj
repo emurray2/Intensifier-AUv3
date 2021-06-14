@@ -8,6 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		071BC8982675168000A0792D /* normalize.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 071BC8972675168000A0792D /* normalize.min.css */; };
+		072E3AC32677E07B00B641CE /* BufferedAudioBus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7AE5266E974000759EFE /* BufferedAudioBus.hpp */; };
+		072E3AC42677E07B00B641CE /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D32671563A00DD518E /* DSPKernel.hpp */; };
+		072E3AC52677E07B00B641CE /* IntensifierDSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D5267156B200DD518E /* IntensifierDSPKernel.hpp */; };
+		072E3AC62677E07B00B641CE /* ParameterRamper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36CF2671559300DD518E /* ParameterRamper.hpp */; };
+		072E3AC72677E09600B641CE /* IntensifierAUv3Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 072E3AB42677D6AC00B641CE /* IntensifierAUv3Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		072E3AC82677E09600B641CE /* IntensifierDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7ADB266E958000759EFE /* IntensifierDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		072E3AC92677E0EB00B641CE /* AUv3IntensifierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F39FFE267180F600DCE13A /* AUv3IntensifierViewController.swift */; };
+		072E3ACA2677E0EB00B641CE /* AUv3Intensifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3A00326719CD900DCE13A /* AUv3Intensifier.swift */; };
+		072E3ACB2677E0EB00B641CE /* AUv3IntensifierParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3A000267185CB00DCE13A /* AUv3IntensifierParameters.swift */; };
+		072E3ACC2677E0EB00B641CE /* IntensifierDSPKernelAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07EA7AD9266E94D000759EFE /* IntensifierDSPKernelAdapter.mm */; };
+		072E3ACD2677E11D00B641CE /* AdjustableDelayLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0762E36826727E2C001CA5BC /* AdjustableDelayLine.h */; };
+		072E3ACE2677E11D00B641CE /* StereoDelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 0762E36A26727E2C001CA5BC /* StereoDelay.h */; };
+		072E3ACF2677E13200B641CE /* AdjustableDelayLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0762E36626727E2C001CA5BC /* AdjustableDelayLine.cpp */; };
+		072E3AD02677E13200B641CE /* StereoDelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0762E36926727E2C001CA5BC /* StereoDelay.cpp */; };
+		072E3AD12677E16600B641CE /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 079A36D12671561800DD518E /* DSPKernel.mm */; };
+		072E3AD22677E19500B641CE /* normalize.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 071BC8972675168000A0792D /* normalize.min.css */; };
+		072E3AD32677E19600B641CE /* angular.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E5204F26739F67005D72A6 /* angular.min.js */; };
+		072E3AD42677E19600B641CE /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E5205026739F67005D72A6 /* jquery.min.js */; };
+		072E3AD52677E19600B641CE /* path-data-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E5205126739F67005D72A6 /* path-data-polyfill.js */; };
+		072E3AD62677E19600B641CE /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E5200F2673857E005D72A6 /* index.html */; };
+		072E3AD72677E19600B641CE /* style.css.map in Resources */ = {isa = PBXBuildFile; fileRef = 07E520102673857E005D72A6 /* style.css.map */; };
+		072E3AD82677E19600B641CE /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E520112673857E005D72A6 /* script.js */; };
+		072E3AD92677E19600B641CE /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 07E520122673857E005D72A6 /* style.css */; };
 		0762E33D2671AC85001CA5BC /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; };
 		0762E33F2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E33E2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift */; };
 		0762E3432671B8B4001CA5BC /* AUv3IntensifierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E3422671B8B4001CA5BC /* AUv3IntensifierExtension.swift */; };
@@ -83,6 +106,7 @@
 		072E3AB12677114100B641CE /* AUv3IntensifierViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewControllerExtension.swift; sourceTree = "<group>"; };
 		072E3AB42677D6AC00B641CE /* IntensifierAUv3Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntensifierAUv3Framework.h; sourceTree = "<group>"; };
 		072E3AB52677D77B00B641CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IntensifierAUv3Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0762E31D2671ABED001CA5BC /* AUv3IntensifierExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AUv3IntensifierExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0762E33E2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewControllerExtension.swift; sourceTree = "<group>"; };
 		0762E3402671B482001CA5BC /* AUv3IntensifierExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUv3IntensifierExtension.entitlements; sourceTree = "<group>"; };
@@ -147,6 +171,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		072E3AB82677DEED00B641CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0762E31A2671ABED001CA5BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,6 +417,7 @@
 				07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */,
 				0762E31D2671ABED001CA5BC /* AUv3IntensifierExtension.appex */,
 				0762E3492671BE55001CA5BC /* Intensifier macOS.app */,
+				072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -448,6 +480,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		072E3AB62677DEED00B641CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072E3AC82677E09600B641CE /* IntensifierDSPKernelAdapter.h in Headers */,
+				072E3AC72677E09600B641CE /* IntensifierAUv3Framework.h in Headers */,
+				072E3ACD2677E11D00B641CE /* AdjustableDelayLine.h in Headers */,
+				072E3ACE2677E11D00B641CE /* StereoDelay.h in Headers */,
+				072E3AC32677E07B00B641CE /* BufferedAudioBus.hpp in Headers */,
+				072E3AC42677E07B00B641CE /* DSPKernel.hpp in Headers */,
+				072E3AC52677E07B00B641CE /* IntensifierDSPKernel.hpp in Headers */,
+				072E3AC62677E07B00B641CE /* ParameterRamper.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07EA7ABB266E8A0D00759EFE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -466,6 +513,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		072E3ABA2677DEED00B641CE /* IntensifierAUv3Framework iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 072E3AC02677DEED00B641CE /* Build configuration list for PBXNativeTarget "IntensifierAUv3Framework iOS" */;
+			buildPhases = (
+				072E3AB62677DEED00B641CE /* Headers */,
+				072E3AB72677DEED00B641CE /* Sources */,
+				072E3AB82677DEED00B641CE /* Frameworks */,
+				072E3AB92677DEED00B641CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IntensifierAUv3Framework iOS";
+			productName = "IntensifierAUv3Framework iOS";
+			productReference = 072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		0762E31C2671ABED001CA5BC /* AUv3IntensifierExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0762E33B2671ABED001CA5BC /* Build configuration list for PBXNativeTarget "AUv3IntensifierExtension" */;
@@ -530,6 +595,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					072E3ABA2677DEED00B641CE = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					0762E31C2671ABED001CA5BC = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -558,11 +626,27 @@
 				07EA7ABF266E8A0D00759EFE /* IntensifierAUv3Framework */,
 				0762E31C2671ABED001CA5BC /* AUv3IntensifierExtension */,
 				0762E3482671BE55001CA5BC /* Intensifier macOS */,
+				072E3ABA2677DEED00B641CE /* IntensifierAUv3Framework iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		072E3AB92677DEED00B641CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072E3AD22677E19500B641CE /* normalize.min.css in Resources */,
+				072E3AD32677E19600B641CE /* angular.min.js in Resources */,
+				072E3AD42677E19600B641CE /* jquery.min.js in Resources */,
+				072E3AD52677E19600B641CE /* path-data-polyfill.js in Resources */,
+				072E3AD62677E19600B641CE /* index.html in Resources */,
+				072E3AD72677E19600B641CE /* style.css.map in Resources */,
+				072E3AD82677E19600B641CE /* script.js in Resources */,
+				072E3AD92677E19600B641CE /* style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0762E31B2671ABED001CA5BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -597,6 +681,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		072E3AB72677DEED00B641CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072E3AD12677E16600B641CE /* DSPKernel.mm in Sources */,
+				072E3ACF2677E13200B641CE /* AdjustableDelayLine.cpp in Sources */,
+				072E3AD02677E13200B641CE /* StereoDelay.cpp in Sources */,
+				072E3AC92677E0EB00B641CE /* AUv3IntensifierViewController.swift in Sources */,
+				072E3ACA2677E0EB00B641CE /* AUv3Intensifier.swift in Sources */,
+				072E3ACB2677E0EB00B641CE /* AUv3IntensifierParameters.swift in Sources */,
+				072E3ACC2677E0EB00B641CE /* IntensifierDSPKernelAdapter.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0762E3192671ABED001CA5BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -651,6 +749,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		072E3AC12677DEED00B641CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = iOS/IntensifierAUv3Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.IntensifierAUv3Framework;
+				PRODUCT_MODULE_NAME = IntensifierAUv3Framework;
+				PRODUCT_NAME = IntensifierAUv3Framework;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		072E3AC22677DEED00B641CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = iOS/IntensifierAUv3Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.IntensifierAUv3Framework;
+				PRODUCT_MODULE_NAME = IntensifierAUv3Framework;
+				PRODUCT_NAME = IntensifierAUv3Framework;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		0762E3392671ABED001CA5BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -942,6 +1098,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		072E3AC02677DEED00B641CE /* Build configuration list for PBXNativeTarget "IntensifierAUv3Framework iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072E3AC12677DEED00B641CE /* Debug */,
+				072E3AC22677DEED00B641CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0762E33B2671ABED001CA5BC /* Build configuration list for PBXNativeTarget "AUv3IntensifierExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

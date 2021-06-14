@@ -1,5 +1,4 @@
 #import <AVFoundation/AVFoundation.h>
-#import <CoreAudioKit/AUGenericView.h>
 #import "IntensifierDSPKernel.hpp"
 #import "BufferedAudioBus.hpp"
 #import "IntensifierDSPKernelAdapter.h"
