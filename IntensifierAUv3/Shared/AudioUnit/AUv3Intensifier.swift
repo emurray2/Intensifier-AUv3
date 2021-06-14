@@ -122,7 +122,7 @@ public class AUv3Intensifier: AUAudioUnit {
         print("\nProcess Name: \(info.processName) PID: \(info.processIdentifier)\n")
 
         let message = """
-        AUv3FilterDemo (
+        AUv3Intensifier (
                   type: \(acd.componentType.stringValue)
                subtype: \(acd.componentSubType.stringValue)
           manufacturer: \(acd.componentManufacturer.stringValue)

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		071BC8982675168000A0792D /* normalize.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 071BC8972675168000A0792D /* normalize.min.css */; };
 		0762E33D2671AC85001CA5BC /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; };
-		0762E33F2671ACCA001CA5BC /* AUv3IntensifierControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E33E2671ACCA001CA5BC /* AUv3IntensifierControllerExtension.swift */; };
+		0762E33F2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E33E2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift */; };
 		0762E3432671B8B4001CA5BC /* AUv3IntensifierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E3422671B8B4001CA5BC /* AUv3IntensifierExtension.swift */; };
 		0762E34C2671BE55001CA5BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E34B2671BE55001CA5BC /* AppDelegate.swift */; };
 		0762E34E2671BE55001CA5BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E34D2671BE55001CA5BC /* ViewController.swift */; };
@@ -79,8 +79,10 @@
 
 /* Begin PBXFileReference section */
 		071BC8972675168000A0792D /* normalize.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = normalize.min.css; sourceTree = "<group>"; };
+		072E3AAF2677054600B641CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072E3AB12677114100B641CE /* AUv3IntensifierViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewControllerExtension.swift; sourceTree = "<group>"; };
 		0762E31D2671ABED001CA5BC /* AUv3IntensifierExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AUv3IntensifierExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		0762E33E2671ACCA001CA5BC /* AUv3IntensifierControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierControllerExtension.swift; sourceTree = "<group>"; };
+		0762E33E2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewControllerExtension.swift; sourceTree = "<group>"; };
 		0762E3402671B482001CA5BC /* AUv3IntensifierExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUv3IntensifierExtension.entitlements; sourceTree = "<group>"; };
 		0762E3412671B5FB001CA5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0762E3422671B8B4001CA5BC /* AUv3IntensifierExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierExtension.swift; sourceTree = "<group>"; };
@@ -169,6 +171,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		072E3AAD2677044400B641CE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				072E3AAE2677052300B641CE /* AUv3IntensifierExtension */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		072E3AAE2677052300B641CE /* AUv3IntensifierExtension */ = {
+			isa = PBXGroup;
+			children = (
+				072E3AAF2677054600B641CE /* Info.plist */,
+				072E3AB12677114100B641CE /* AUv3IntensifierViewControllerExtension.swift */,
+			);
+			path = AUv3IntensifierExtension;
+			sourceTree = "<group>";
+		};
 		0762E31E2671ABED001CA5BC /* macOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +359,7 @@
 		07EA7AB6266E8A0D00759EFE = {
 			isa = PBXGroup;
 			children = (
+				072E3AAD2677044400B641CE /* iOS */,
 				0762E31E2671ABED001CA5BC /* macOS */,
 				07EA7ACC266E908700759EFE /* Shared */,
 				0762E34A2671BE55001CA5BC /* Intensifier macOS */,
@@ -363,7 +383,7 @@
 			children = (
 				07EA7AC4266E8A0D00759EFE /* Info.plist */,
 				07EA7AC3266E8A0D00759EFE /* IntensifierAUv3Framework.h */,
-				0762E33E2671ACCA001CA5BC /* AUv3IntensifierControllerExtension.swift */,
+				0762E33E2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift */,
 			);
 			path = IntensifierAUv3Framework;
 			sourceTree = "<group>";
@@ -592,7 +612,7 @@
 				07F3A002267188C000DCE13A /* AUv3IntensifierParameters.swift in Sources */,
 				07F39FFF267180F600DCE13A /* AUv3IntensifierViewController.swift in Sources */,
 				07F3A00426719CD900DCE13A /* AUv3Intensifier.swift in Sources */,
-				0762E33F2671ACCA001CA5BC /* AUv3IntensifierControllerExtension.swift in Sources */,
+				0762E33F2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift in Sources */,
 				07EA7ADA266E94D000759EFE /* IntensifierDSPKernelAdapter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
