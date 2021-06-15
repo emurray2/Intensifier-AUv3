@@ -16,12 +16,12 @@
             <div class="profile-card__name">Intensifier AUv3</div>
             <div class="app-container" ng-app="IntensifierAUv3" ng-controller="IntensifierCtrl">
               <div class="controls-container">
-                <div class="slider frequency-slider" slider label="Input Amount" minvalue="-40" maxvalue="30" control="frequency" decimals="2" update="updateGraph()"></div>
-                <div class="slider amplitude-slider" slider label="Attack Amount" minvalue="-40" maxvalue="30" control="amplitude" decimals="2" update="updateGraph()"></div>
-                <div class="slider framerate-slider" slider label="Release Amount" minvalue="-40" maxvalue="30" control="framerate" decimals="2" update="updateGraph()"></div>
-                <div class="slider speed-slider" slider label="Attack Time" minvalue="0" maxvalue="500" control="increment" decimals="2" update="updateGraph()"></div>
-                <div class="slider rotation-slider" slider label="Release Time" minvalue="0" maxvalue="5" control="rotation" decimals="2" update="updateGraph()"></div>
-                <div class="slider output-slider" slider label="Output Amount" minvalue="-40" maxvalue="30" control="output" decimals="2" update="updateGraph()"></div>
+                <div class="slider inputamount-slider" slider label="Input Amount" minvalue="-40" maxvalue="30" control="inputamount" decimals="2" unit="dB"></div>
+                <div class="slider attackamount-slider" slider label="Attack Amount" minvalue="-40" maxvalue="30" control="attackamount" decimals="2" unit="dB"></div>
+                <div class="slider releaseamount-slider" slider label="Release Amount" minvalue="-40" maxvalue="30" control="releaseamount" decimals="2" unit="dB"></div>
+                <div class="slider attacktime-slider" slider label="Attack Time" minvalue="0" maxvalue="500" control="attacktime" decimals="2" unit="ms"></div>
+                <div class="slider releasetime-slider" slider label="Release Time" minvalue="0" maxvalue="5" control="releasetime" decimals="2" unit="sec"></div>
+                <div class="slider outputamount-slider" slider label="Output Amount" minvalue="-40" maxvalue="30" control="outputamount" decimals="2" unit="dB"></div>
               </div>
             </div>
         </div>

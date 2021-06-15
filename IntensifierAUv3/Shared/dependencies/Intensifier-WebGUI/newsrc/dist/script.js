@@ -13,7 +13,7 @@ app.directive('slider', function () {
 			<div class="slider-label">{{ label }}</div>
 			<div class="slider-bar"></div>
 			<div class="slider-handle"></div>
-			<div class="slider-value">{{ control | number:decimals }}</div>
+			<div class="slider-value">{{ control | number:decimals }}{{"&nbsp;"}}{{unit}}</div>
 		`,
 		scope: {
 			'label': '@',
@@ -21,7 +21,7 @@ app.directive('slider', function () {
 			'maxvalue': '=',
 			'control': '=',
 			'decimals': '=',
-			'update': '&'
+            'unit': '@'
 		},
 		link: function (scope, element, attrs) {
 			var handle;
@@ -66,9 +66,9 @@ app.directive('slider', function () {
 				positionHandle(position);
 				var newvalue = (position / sliderbar[0].offsetWidth) * (scope.maxvalue - scope.minvalue) + scope.minvalue;
 				scope.control = newvalue;
-				window.webkit.messageHandlers.typeListener.postMessage(handle[0].parentElement.attributes[2].nodeValue);
-                window.webkit.messageHandlers.valueListener.postMessage(scope.control);
-				scope.update();
+				//window.webkit.messageHandlers.typeListener.postMessage(handle[0].parentElement.attributes[2].nodeValue);
+                //window.webkit.messageHandlers.valueListener.postMessage(scope.control);
+				//scope.update();
 				scope.$apply();
 			});
 			$(window).on('mousemove touchmove', function (event) {
@@ -77,9 +77,9 @@ app.directive('slider', function () {
 					positionHandle(position);
 					var newvalue = (position / sliderbar[0].offsetWidth) * (scope.maxvalue - scope.minvalue) + scope.minvalue;
 					scope.control = newvalue;
-					window.webkit.messageHandlers.typeListener.postMessage(handle[0].parentElement.attributes[2].nodeValue);
-                    window.webkit.messageHandlers.valueListener.postMessage(scope.control);
-					scope.update();
+					//window.webkit.messageHandlers.typeListener.postMessage(handle[0].parentElement.attributes[2].nodeValue);
+                    //window.webkit.messageHandlers.valueListener.postMessage(scope.control);
+					//scope.update();
 					scope.$apply();
 				}
 			});
@@ -89,28 +89,6 @@ app.directive('slider', function () {
 			
 			scope.$watch('control', function () {
 				initialize();
-			});
-		}
-	}
-});
-
-app.directive('toggle', function () {
-	return {
-		restrict: 'A',
-		template: `
-			<div class="toggle-label">{{ label }}</div>
-			<div class="toggle-container" ng-class="{'toggle-off': !property}">
-				<div class="toggle-handle"></div>
-			</div>
-		`,
-		scope: {
-			'label': '@',
-			'property': '=',
-		},
-		link: function (scope, element, attrs) {
-			element.on('click', function () {
-				scope.property = !scope.property;
-				scope.$apply();
 			});
 		}
 	}

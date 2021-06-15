@@ -28,50 +28,6 @@ a, a:hover {
   text-decoration: none;
 }
 
-.function {
-	margin: 15px;
-}
-
-.graph-container {
-	width: 300px;
-	height: 300px;
-	border-radius: 4px;
-	margin: 75px auto;
-	position: relative;
-	left: 0;
-	right: 0;
-}
-
-.sine-wave-reference {
-	opacity: 0.15;
-}
-
-.svg {
-	overflow: visible;
-}
-
-.playback-controls {
-	position: relative;
-	width: 100%;
-	min-width: 350px;
-	font-size: 0;
-}
-
-.button {
-	display: inline-block;
-	border-radius: 2px;
-	font-family: sans-serif;
-	cursor: pointer;
-	color: #0DAD30;
-	height: 40px;
-	vertical-align: top;
-	margin: 15px;
-}
-.button.play {
-	left: -2px;
-	position: relative;
-}
-
 .controls-container {
 	width: 350px;
 	margin: 0 auto;
@@ -95,7 +51,6 @@ a, a:hover {
 	top: 0;
 	left: 0;
 	color: white;
-	text-transform: lowercase;
 	font-weight: 300;
 }
 .slider-bar {
@@ -129,76 +84,8 @@ a, a:hover {
 	font-family: sans-serif;
 	font-weight: 300;
 }
-.reset {
-	font-family: sans-serif;
-	color: $color1;
-	cursor: pointer;
-	font-size: 14px;
-	font-weight: 300;
-	margin: 15px 0;
-	height: 40px;
-	line-height: 40px;
-	position: relative;
-	display: inline-block;
-	padding: 0 15px;
-	background: white;
-	border-radius: 4px;
-}
-
-.toggle {
-	height: 40px;
-	position: relative;
-}
-.shadow-toggle {
-	position: absolute;
-	bottom: 15px;
-	right: 0;
-}
-.toggle-label {
-	height: 40px;
-	line-height: 40px;
-	font-size: 12px;
-	font-family: sans-serif;
-	text-transform: lowercase;
-	color: white;
-	font-weight: 300;
-	position: absolute;
-	right: 70px;
-	
-}
-.toggle-container {
-	width: 60px;
-	height: 40px;
-	border-radius: 20px;
-	position: absolute;
-	top: 0;
-	right: -5px;
-	cursor: pointer;
-	border: 2px solid white;
-	background: $color1;
-	transition: background 0.25s cubic-bezier(1,0,0,1);
-}
-.toggle-handle {
-	height: 36px;
-	width: 36px;
-	position: absolute;
-	background: black;
-	left: 20px;
-	border-radius: 18px;
-	background: white;
-	border: 2px solid $color1;
-	transition: left 0.25s cubic-bezier(1,0,0,1);
-}
-.toggle-container.toggle-off {
-	background: white;
-	.toggle-handle {
-		right: auto;
-		left: 0;
-	}
-}
 
 .wrapper {
-  width: 100%;
   width: 100%;
   height: auto;
   min-height: 100vh;
