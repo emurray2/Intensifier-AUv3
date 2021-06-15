@@ -40,11 +40,6 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 800.0, height: 500.0), configuration: webViewConfiguration)
         webView.loadFileURL(myURL!, allowingReadAccessTo: resURL!)
         view = webView
-        view.window?.contentViewController
-    }
-    public override func viewDidAppear() {
-        super.viewDidAppear()
-        print(webView.window?.delegate)
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,9 +105,5 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
                 }
             }
         }
-    }
-    public func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
-        webView.magnification = 0.0015 * frameSize.height
-        return frameSize
     }
 }

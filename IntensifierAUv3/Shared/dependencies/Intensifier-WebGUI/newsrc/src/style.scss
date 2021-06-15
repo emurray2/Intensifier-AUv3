@@ -9,6 +9,7 @@ html {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-o-user-select: none;
+ width: 100%;
 }
 
 $color1: #0DAD83;
@@ -29,13 +30,13 @@ a, a:hover {
 }
 
 .controls-container {
-	width: 350px;
+	width: 90%;
 	margin: 0 auto;
 	position: relative;
 	text-align: left;
 }
 .slider {
-	width: 350px;
+	width: 90%;
 	margin: 0 auto;
 	height: 60px;
 	position: relative;
@@ -43,7 +44,7 @@ a, a:hover {
 	right: 0;
 }
 .slider-label {
-	font-family: sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	font-size: 12px;
 	line-height: 20px;
 	height: 20px;
@@ -81,7 +82,7 @@ a, a:hover {
 	border-radius: 4px;
 	line-height: 40px;
 	color: white;
-	font-family: sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	font-weight: 300;
 }
 
