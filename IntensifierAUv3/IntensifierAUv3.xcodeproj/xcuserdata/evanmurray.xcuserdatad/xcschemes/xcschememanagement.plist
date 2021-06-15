@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AUv3IntensifierExtension iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>AUv3IntensifierExtension macOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -14,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Intensifier iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Intensifier macOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,12 +32,25 @@
 		<key>IntensifierAUv3Framework iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>IntensifierAUv3Framework.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>072E3B11267812A600B641CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>072E3B5B2678176300B641CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

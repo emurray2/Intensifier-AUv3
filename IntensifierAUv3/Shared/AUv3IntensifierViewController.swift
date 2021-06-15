@@ -31,15 +31,6 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
             }
         }
     }
-    #if os(macOS)
-    public override init(nibName: NSNib.Name?, bundle: Bundle?) {
-        // Pass a reference to the owning framework bundle
-        super.init(nibName: nil, bundle: Bundle(for: Swift.type(of: self)))
-    }
-    #endif
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
     public override func loadView() {
         let resURL = Bundle(for: Swift.type(of: self)).resourceURL?.absoluteURL
         let myURL = Bundle(for: Swift.type(of: self)).url(forResource: "index", withExtension: "html")
@@ -50,14 +41,6 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         webView.loadFileURL(myURL!, allowingReadAccessTo: resURL!)
         view = webView
     }
-    #if os(macOS)
-    public override func viewDidAppear() {
-        super.viewDidAppear()
-        if view.window!.frame.size.height < 373.0 {
-            view.setFrameSize(NSSize(width: 2 * view.window!.frame.size.width, height: 2 * view.window!.frame.size.height))
-        }
-    }
-    #endif
     public override func viewDidLoad() {
         super.viewDidLoad()
         connectViewToAU()
