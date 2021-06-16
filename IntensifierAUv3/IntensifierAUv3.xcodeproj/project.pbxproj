@@ -171,7 +171,7 @@
 		0762E3402671B482001CA5BC /* AUv3IntensifierExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUv3IntensifierExtension.entitlements; sourceTree = "<group>"; };
 		0762E3412671B5FB001CA5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0762E3422671B8B4001CA5BC /* AUv3IntensifierExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierExtension.swift; sourceTree = "<group>"; };
-		0762E3492671BE55001CA5BC /* Intensifier macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intensifier macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0762E3492671BE55001CA5BC /* Intensifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intensifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0762E34B2671BE55001CA5BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0762E34D2671BE55001CA5BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0762E34F2671BE56001CA5BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -509,7 +509,7 @@
 			children = (
 				07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */,
 				0762E31D2671ABED001CA5BC /* AUv3IntensifierExtension.appex */,
-				0762E3492671BE55001CA5BC /* Intensifier macOS.app */,
+				0762E3492671BE55001CA5BC /* Intensifier.app */,
 				072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */,
 				072E3ADE2678101700B641CE /* AUv3IntensifierExtension.appex */,
 				072E3B12267812A600B641CE /* Intensifier.app */,
@@ -682,9 +682,9 @@
 			productReference = 0762E31D2671ABED001CA5BC /* AUv3IntensifierExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		0762E3482671BE55001CA5BC /* Intensifier macOS */ = {
+		0762E3482671BE55001CA5BC /* Intensifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0762E3562671BE56001CA5BC /* Build configuration list for PBXNativeTarget "Intensifier macOS" */;
+			buildConfigurationList = 0762E3562671BE56001CA5BC /* Build configuration list for PBXNativeTarget "Intensifier" */;
 			buildPhases = (
 				0762E3452671BE55001CA5BC /* Sources */,
 				0762E3462671BE55001CA5BC /* Frameworks */,
@@ -697,9 +697,9 @@
 			dependencies = (
 				0762E35C2671BEA7001CA5BC /* PBXTargetDependency */,
 			);
-			name = "Intensifier macOS";
+			name = Intensifier;
 			productName = "Intensifier macOS";
-			productReference = 0762E3492671BE55001CA5BC /* Intensifier macOS.app */;
+			productReference = 0762E3492671BE55001CA5BC /* Intensifier.app */;
 			productType = "com.apple.product-type.application";
 		};
 		07EA7ABF266E8A0D00759EFE /* IntensifierAUv3Framework */ = {
@@ -765,7 +765,7 @@
 			targets = (
 				07EA7ABF266E8A0D00759EFE /* IntensifierAUv3Framework */,
 				0762E31C2671ABED001CA5BC /* AUv3IntensifierExtension */,
-				0762E3482671BE55001CA5BC /* Intensifier macOS */,
+				0762E3482671BE55001CA5BC /* Intensifier */,
 				072E3ABA2677DEED00B641CE /* IntensifierAUv3Framework iOS */,
 				072E3ADD2678101700B641CE /* AUv3IntensifierExtension iOS */,
 				072E3B11267812A600B641CE /* Intensifier iOS */,
@@ -1440,7 +1440,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0762E3562671BE56001CA5BC /* Build configuration list for PBXNativeTarget "Intensifier macOS" */ = {
+		0762E3562671BE56001CA5BC /* Build configuration list for PBXNativeTarget "Intensifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0762E3572671BE56001CA5BC /* Debug */,
