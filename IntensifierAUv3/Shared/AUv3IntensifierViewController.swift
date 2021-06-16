@@ -2,7 +2,6 @@ import CoreAudioKit
 import WebKit
 
 public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler {
-    private var viewConfig: AUAudioUnitViewConfiguration!
 
     private var inputAmountParameter: AUParameter!
     private var attackAmountParameter: AUParameter!
@@ -43,6 +42,7 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
+        guard audioUnitCreated != nil else { return }
         connectViewToAU()
     }
     private func connectViewToAU() {
@@ -65,6 +65,32 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         attackTimeParameter = attackTime
         releaseTimeParameter = releaseTime
         outputAmountParameter = outputAmount
+
+        // Observe major state changes like a user selecting a user preset.
+        observer = audioUnitCreated?.observe(\.allParameterValues) { object, change in
+            DispatchQueue.main.async {
+                //self.updateUI()
+            }
+        }
+
+        // Observe value changes made to the parameters.
+        parameterObserverToken =
+            paramTree.token(byAddingParameterObserver: { [weak self] address, value in
+                guard let self = self else { return }
+
+                // This closure is being called by an arbitrary queue. Ensure
+                // all UI updates are dispatched back to the main thread.
+                if [inputAmount.address,
+                    attackAmount.address,
+                    releaseAmount.address,
+                    attackTime.address,
+                    releaseTime.address,
+                    outputAmount.address].contains(address) {
+                    DispatchQueue.main.async {
+                        //self.updateUI()
+                    }
+                }
+            })
 
         // Indicate the view and AU are connected
         needsConnection = false

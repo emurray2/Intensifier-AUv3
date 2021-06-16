@@ -68,7 +68,6 @@ app.directive('slider', function () {
 				scope.control = newvalue;
 				window.webkit.messageHandlers.typeListener.postMessage(handle[0].parentElement.attributes[2].nodeValue);
                 window.webkit.messageHandlers.valueListener.postMessage(scope.control);
-				//scope.update();
 				scope.$apply();
 			});
 			$(window).on('mousemove touchmove', function (event) {
@@ -79,14 +78,16 @@ app.directive('slider', function () {
 					scope.control = newvalue;
 					window.webkit.messageHandlers.typeListener.postMessage(handle[0].parentElement.attributes[2].nodeValue);
                     window.webkit.messageHandlers.valueListener.postMessage(scope.control);
-					//scope.update();
 					scope.$apply();
 				}
 			});
 			$(window).on('mouseup touchend', function (event) {
 				scope.moving = false;
 			});
-			
+            $(window).on('resize', function (event) {
+                handle_offset = percent_offset * sliderbar[0].offsetWidth;
+                positionHandle(handle_offset);
+            });
 			scope.$watch('control', function () {
 				initialize();
 			});

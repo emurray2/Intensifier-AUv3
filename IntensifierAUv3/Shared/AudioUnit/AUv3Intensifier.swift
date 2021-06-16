@@ -177,10 +177,6 @@ public class AUv3Intensifier: AUAudioUnit {
         select(config)
         return indexSet
     }
-
-    public override func select(_ viewConfiguration: AUAudioUnitViewConfiguration) {
-        //viewController?.selectViewConfiguration(viewConfiguration)
-    }
 }
 
 extension FourCharCode {
