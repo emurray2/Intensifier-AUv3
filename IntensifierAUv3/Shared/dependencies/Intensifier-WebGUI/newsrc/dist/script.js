@@ -32,7 +32,7 @@ app.directive('slider', function () {
 			function positionHandle(position) {
 				handle.css({
 					left: position + 'px',
-				});			
+				});	
 			}
 			
 			function initialize () {
@@ -85,8 +85,10 @@ app.directive('slider', function () {
 				scope.moving = false;
 			});
             $(window).on('resize', function (event) {
+                percent_offset = (scope.control - scope.minvalue) / (scope.maxvalue - scope.minvalue);
                 handle_offset = percent_offset * sliderbar[0].offsetWidth;
                 positionHandle(handle_offset);
+                scope.$apply();
             });
 			scope.$watch('control', function () {
 				initialize();

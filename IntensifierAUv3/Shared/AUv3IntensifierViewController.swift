@@ -19,6 +19,8 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
 
     var webView: WKWebView!
 
+    var webPageLoaded = false
+
     var needsConnection = true
     public var audioUnitCreated: AUv3Intensifier? {
         didSet {
@@ -38,6 +40,7 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         webViewConfiguration.userContentController.add(self, name: "valueListener")
         webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 800.0, height: 500.0), configuration: webViewConfiguration)
         webView.loadFileURL(myURL!, allowingReadAccessTo: resURL!)
+        webView.navigationDelegate = self
         view = webView
     }
     public override func viewDidLoad() {
@@ -69,7 +72,9 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         // Observe major state changes like a user selecting a user preset.
         observer = audioUnitCreated?.observe(\.allParameterValues) { object, change in
             DispatchQueue.main.async {
-                //self.updateUI()
+                if self.webPageLoaded {
+                    self.updateUI()
+                }
             }
         }
 
@@ -87,13 +92,120 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
                     releaseTime.address,
                     outputAmount.address].contains(address) {
                     DispatchQueue.main.async {
-                        //self.updateUI()
+                        if self.webPageLoaded {
+                            self.updateUI()
+                        }
                     }
                 }
             })
 
         // Indicate the view and AU are connected
         needsConnection = false
+    }
+    private func updateUI() {
+        let scripts = [
+            """
+            angular.element(document.getElementsByClassName('app-container')).scope().inputamount = \(inputAmountParameter.value.truncate(places: 2));
+            angular.element(document.getElementsByClassName('app-container')).scope().attackamount = \(attackAmountParameter.value.truncate(places: 2));
+            angular.element(document.getElementsByClassName('app-container')).scope().releaseamount = \(releaseAmountParameter.value.truncate(places: 2));
+            angular.element(document.getElementsByClassName('app-container')).scope().attacktime = \(attackTimeParameter.value.truncate(places: 2));
+            angular.element(document.getElementsByClassName('app-container')).scope().releasetime = \(releaseTimeParameter.value.truncate(places: 2));
+            angular.element(document.getElementsByClassName('app-container')).scope().outputamount = \(outputAmountParameter.value.truncate(places: 2));
+
+            var inputamountsliderbar = document.getElementsByClassName('slider')[0].children[1];
+            var attackamountsliderbar = document.getElementsByClassName('slider')[1].children[1];
+            var releaseamountsliderbar = document.getElementsByClassName('slider')[2].children[1];
+            var attacktimesliderbar = document.getElementsByClassName('slider')[3].children[1];
+            var releasetimesliderbar = document.getElementsByClassName('slider')[4].children[1];
+            var outputamountsliderbar = document.getElementsByClassName('slider')[5].children[1];
+
+            var inputamountsliderstyle = document.getElementsByClassName('slider')[0].children[2].attributes[1];
+            var attackamountsliderstyle = document.getElementsByClassName('slider')[1].children[2].attributes[1];
+            var releaseamountsliderstyle = document.getElementsByClassName('slider')[2].children[2].attributes[1];
+            var attacktimesliderstyle = document.getElementsByClassName('slider')[3].children[2].attributes[1];
+            var releasetimesliderstyle = document.getElementsByClassName('slider')[4].children[2].attributes[1];
+            var outputamountsliderstyle = document.getElementsByClassName('slider')[5].children[2].attributes[1];
+
+            if (typeof inputamountsliderstyle == 'undefined') {
+                document.getElementsByClassName('slider')[0].children[2].setAttribute("style", "");
+                inputamountsliderstyle = document.getElementsByClassName('slider')[0].children[2].attributes[1];
+            }
+            if (typeof attackamountsliderstyle == 'undefined') {
+                document.getElementsByClassName('slider')[1].children[2].setAttribute("style", "");
+                attackamountsliderstyle = document.getElementsByClassName('slider')[1].children[2].attributes[1];
+            }
+            if (typeof releaseamountsliderstyle == 'undefined') {
+                document.getElementsByClassName('slider')[2].children[2].setAttribute("style", "");
+                releaseamountsliderstyle = document.getElementsByClassName('slider')[2].children[2].attributes[1];
+            }
+            if (typeof attacktimesliderstyle == 'undefined') {
+                document.getElementsByClassName('slider')[3].children[2].setAttribute("style", "");
+                attacktimesliderstyle = document.getElementsByClassName('slider')[3].children[2].attributes[1];
+            }
+            if (typeof releasetimesliderstyle == 'undefined') {
+                document.getElementsByClassName('slider')[4].children[2].setAttribute("style", "");
+                releasetimesliderstyle = document.getElementsByClassName('slider')[4].children[2].attributes[1];
+            }
+            if (typeof outputamountsliderstyle == 'undefined') {
+                document.getElementsByClassName('slider')[5].children[2].setAttribute("style", "");
+                outputamountsliderstyle = document.getElementsByClassName('slider')[5].children[2].attributes[1];
+            }
+
+            var inputamountcurrvalue = angular.element(document.getElementsByClassName('app-container')).scope().inputamount;
+            var attackamountcurrvalue = angular.element(document.getElementsByClassName('app-container')).scope().attackamount;
+            var releaseamountcurrvalue = angular.element(document.getElementsByClassName('app-container')).scope().releaseamount;
+            var attacktimecurrvalue = angular.element(document.getElementsByClassName('app-container')).scope().attacktime;
+            var releasetimecurrvalue = angular.element(document.getElementsByClassName('app-container')).scope().releasetime;
+            var outputamountcurrvalue = angular.element(document.getElementsByClassName('app-container')).scope().outputamount;
+
+            var inputamountminvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.minvalue;
+            var attackamountminvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.minvalue;
+            var releaseamountminvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.$$nextSibling.minvalue;
+            var attacktimeminvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.$$nextSibling.$$nextSibling.minvalue;
+            var releasetimeminvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.$$nextSibling.$$nextSibling.$$nextSibling.minvalue;
+            var outputamountminvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.$$nextSibling.$$nextSibling.$$nextSibling.$$nextSibling.minvalue;
+
+            var inputamountmaxvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.maxvalue;
+            var attackamountmaxvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.maxvalue;
+            var releaseamountmaxvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.$$nextSibling.maxvalue;
+            var attacktimemaxvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.$$nextSibling.$$nextSibling.maxvalue;
+            var releasetimemaxvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.$$nextSibling.$$nextSibling.$$nextSibling.maxvalue;
+            var outputamountmaxvalue = angular.element(document.getElementsByClassName('app-container')).scope().$$childHead.$$nextSibling.$$nextSibling.$$nextSibling.$$nextSibling.$$nextSibling.maxvalue;
+
+            var inputamountpercentoffset = (inputamountcurrvalue - inputamountminvalue) / (inputamountmaxvalue - inputamountminvalue);
+            var attackamountpercentoffset = (attackamountcurrvalue - attackamountminvalue) / (attackamountmaxvalue - attackamountminvalue);
+            var releaseamountpercentoffset = (releaseamountcurrvalue - releaseamountminvalue) / (releaseamountmaxvalue - releaseamountminvalue);
+            var attacktimepercentoffset = (attacktimecurrvalue - attacktimeminvalue) / (attacktimemaxvalue - attacktimeminvalue);
+            var releasetimepercentoffset = (releasetimecurrvalue - releasetimeminvalue) / (releasetimemaxvalue - releasetimeminvalue);
+            var outputamountpercentoffset = (outputamountcurrvalue - outputamountminvalue) / (outputamountmaxvalue - outputamountminvalue);
+
+            var inputamounthandleoffset = inputamountpercentoffset * inputamountsliderbar.offsetWidth;
+            var attackamounthandleoffset = attackamountpercentoffset * attackamountsliderbar.offsetWidth;
+            var releaseamounthandleoffset = releaseamountpercentoffset * releaseamountsliderbar.offsetWidth;
+            var attacktimehandleoffset = attacktimepercentoffset * attacktimesliderbar.offsetWidth;
+            var releasetimehandleoffset = releasetimepercentoffset * releasetimesliderbar.offsetWidth;
+            var outputamounthandleoffset = outputamountpercentoffset * outputamountsliderbar.offsetWidth;
+
+            inputamountsliderstyle.value = "left: " + inputamounthandleoffset + "px;";
+            attackamountsliderstyle.value = "left: " + attackamounthandleoffset + "px;";
+            releaseamountsliderstyle.value = "left: " + releaseamounthandleoffset + "px;";
+            attacktimesliderstyle.value = "left: " + attacktimehandleoffset + "px;";
+            releasetimesliderstyle.value = "left: " + releasetimehandleoffset + "px;";
+            outputamountsliderstyle.value = "left: " + outputamounthandleoffset + "px;";
+
+            document.getElementsByClassName('slider')[0].children[3].innerHTML = "\(inputAmountParameter.value.truncate(places: 2))&nbsp;dB";
+            document.getElementsByClassName('slider')[1].children[3].innerHTML = "\(attackAmountParameter.value.truncate(places: 2))&nbsp;dB";
+            document.getElementsByClassName('slider')[2].children[3].innerHTML = "\(releaseAmountParameter.value.truncate(places: 2))&nbsp;dB";
+            document.getElementsByClassName('slider')[3].children[3].innerHTML = "\(attackTimeParameter.value.truncate(places: 2))&nbsp;ms";
+            document.getElementsByClassName('slider')[4].children[3].innerHTML = "\(releaseTimeParameter.value.truncate(places: 2))&nbsp;sec";
+            document.getElementsByClassName('slider')[5].children[3].innerHTML = "\(outputAmountParameter.value.truncate(places: 2))&nbsp;dB";
+            "ok";
+            """
+        ]
+        for script in scripts {
+            webView.evaluateJavaScript(script) { (result, error) in
+            }
+        }
     }
     func performOnMain(_ operation: @escaping () -> Void) {
         if Thread.isMainThread {
@@ -131,5 +243,9 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
                 }
             }
         }
+    }
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webPageLoaded = true
+        updateUI()
     }
 }

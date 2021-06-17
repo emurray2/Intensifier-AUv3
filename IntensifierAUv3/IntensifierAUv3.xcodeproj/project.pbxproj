@@ -73,6 +73,8 @@
 		07EA7ADA266E94D000759EFE /* IntensifierDSPKernelAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07EA7AD9266E94D000759EFE /* IntensifierDSPKernelAdapter.mm */; };
 		07EA7ADC266E958000759EFE /* IntensifierDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7ADB266E958000759EFE /* IntensifierDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07EA7AE6266E974000759EFE /* BufferedAudioBus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07EA7AE5266E974000759EFE /* BufferedAudioBus.hpp */; };
+		07EF9F7D267ABE21006957E0 /* AUValue+truncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EF9F7C267ABE21006957E0 /* AUValue+truncate.swift */; };
+		07EF9F7E267ABE21006957E0 /* AUValue+truncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EF9F7C267ABE21006957E0 /* AUValue+truncate.swift */; };
 		07F39FFF267180F600DCE13A /* AUv3IntensifierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F39FFE267180F600DCE13A /* AUv3IntensifierViewController.swift */; };
 		07F3A002267188C000DCE13A /* AUv3IntensifierParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3A000267185CB00DCE13A /* AUv3IntensifierParameters.swift */; };
 		07F3A00426719CD900DCE13A /* AUv3Intensifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3A00326719CD900DCE13A /* AUv3Intensifier.swift */; };
@@ -225,6 +227,7 @@
 		07EA7AE1266E971000759EFE /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreAudioKit.framework; sourceTree = DEVELOPER_DIR; };
 		07EA7AE3266E971B00759EFE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		07EA7AE5266E974000759EFE /* BufferedAudioBus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BufferedAudioBus.hpp; sourceTree = "<group>"; };
+		07EF9F7C267ABE21006957E0 /* AUValue+truncate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AUValue+truncate.swift"; sourceTree = "<group>"; };
 		07F39FFE267180F600DCE13A /* AUv3IntensifierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewController.swift; sourceTree = "<group>"; };
 		07F3A000267185CB00DCE13A /* AUv3IntensifierParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierParameters.swift; sourceTree = "<group>"; };
 		07F3A00326719CD900DCE13A /* AUv3Intensifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3Intensifier.swift; sourceTree = "<group>"; };
@@ -530,6 +533,7 @@
 		07EA7ACC266E908700759EFE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				07EF9F7B267ABD95006957E0 /* Extensions */,
 				07F39FFE267180F600DCE13A /* AUv3IntensifierViewController.swift */,
 				0762E36426727E2C001CA5BC /* dependencies */,
 				07EA7ACD266E90EB00759EFE /* AudioUnit */,
@@ -571,6 +575,14 @@
 				079A36CF2671559300DD518E /* ParameterRamper.hpp */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		07EF9F7B267ABD95006957E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07EF9F7C267ABE21006957E0 /* AUValue+truncate.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -845,6 +857,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				072E3AD12677E16600B641CE /* DSPKernel.mm in Sources */,
+				07EF9F7E267ABE21006957E0 /* AUValue+truncate.swift in Sources */,
 				072E3ACF2677E13200B641CE /* AdjustableDelayLine.cpp in Sources */,
 				07E02F3026784769005B9F1A /* AUv3IntensifierViewControllerExtension.swift in Sources */,
 				072E3AD02677E13200B641CE /* StereoDelay.cpp in Sources */,
@@ -895,6 +908,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0762E3712672B087001CA5BC /* StereoDelay.cpp in Sources */,
+				07EF9F7D267ABE21006957E0 /* AUValue+truncate.swift in Sources */,
 				0762E36B26727E2C001CA5BC /* AdjustableDelayLine.cpp in Sources */,
 				079A36D22671561800DD518E /* DSPKernel.mm in Sources */,
 				07F3A002267188C000DCE13A /* AUv3IntensifierParameters.swift in Sources */,
