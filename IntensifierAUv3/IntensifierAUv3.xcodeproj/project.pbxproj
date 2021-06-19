@@ -61,6 +61,12 @@
 		079A36D22671561800DD518E /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 079A36D12671561800DD518E /* DSPKernel.mm */; };
 		079A36D42671563A00DD518E /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D32671563A00DD518E /* DSPKernel.hpp */; };
 		079A36D6267156B200DD518E /* IntensifierDSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D5267156B200DD518E /* IntensifierDSPKernel.hpp */; };
+		07B34565267C529500CB5958 /* AudioUnitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B34564267C529500CB5958 /* AudioUnitManager.swift */; };
+		07B34566267C529500CB5958 /* AudioUnitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B34564267C529500CB5958 /* AudioUnitManager.swift */; };
+		07C5117B267D6FDE00F486D8 /* rmsaverage.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C5117A267D6FDE00F486D8 /* rmsaverage.h */; };
+		07C5117C267D6FDE00F486D8 /* rmsaverage.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C5117A267D6FDE00F486D8 /* rmsaverage.h */; };
+		07C5117E267D78EA00F486D8 /* rmsaverage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C5117D267D78EA00F486D8 /* rmsaverage.cpp */; };
+		07C5117F267D78EA00F486D8 /* rmsaverage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C5117D267D78EA00F486D8 /* rmsaverage.cpp */; };
 		07E02F3026784769005B9F1A /* AUv3IntensifierViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E02F2F26784769005B9F1A /* AUv3IntensifierViewControllerExtension.swift */; };
 		07E5204A267385C6005D72A6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E5200F2673857E005D72A6 /* index.html */; };
 		07E5204B267385C6005D72A6 /* style.css.map in Resources */ = {isa = PBXBuildFile; fileRef = 07E520102673857E005D72A6 /* style.css.map */; };
@@ -189,7 +195,11 @@
 		079A36D12671561800DD518E /* DSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPKernel.mm; sourceTree = "<group>"; };
 		079A36D32671563A00DD518E /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
 		079A36D5267156B200DD518E /* IntensifierDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IntensifierDSPKernel.hpp; sourceTree = "<group>"; };
+		07B34564267C529500CB5958 /* AudioUnitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitManager.swift; sourceTree = "<group>"; };
 		07B8759826741739001FE116 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AudioUnit.framework; sourceTree = DEVELOPER_DIR; };
+		07C51179267D6E5D00F486D8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		07C5117A267D6FDE00F486D8 /* rmsaverage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rmsaverage.h; sourceTree = "<group>"; };
+		07C5117D267D78EA00F486D8 /* rmsaverage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rmsaverage.cpp; sourceTree = "<group>"; };
 		07E02F2F26784769005B9F1A /* AUv3IntensifierViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewControllerExtension.swift; sourceTree = "<group>"; };
 		07E5200F2673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		07E520102673857E005D72A6 /* style.css.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = style.css.map; sourceTree = "<group>"; };
@@ -361,6 +371,7 @@
 		0762E36426727E2C001CA5BC /* dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				07C51178267D6E0700F486D8 /* Cyclone Objects */,
 				07E5200C2673857E005D72A6 /* Intensifier-WebGUI */,
 				0762E36526727E2C001CA5BC /* DunneAudioKit */,
 			);
@@ -377,6 +388,16 @@
 				0762E36A26727E2C001CA5BC /* StereoDelay.h */,
 			);
 			path = DunneAudioKit;
+			sourceTree = "<group>";
+		};
+		07C51178267D6E0700F486D8 /* Cyclone Objects */ = {
+			isa = PBXGroup;
+			children = (
+				07C51179267D6E5D00F486D8 /* LICENSE */,
+				07C5117A267D6FDE00F486D8 /* rmsaverage.h */,
+				07C5117D267D78EA00F486D8 /* rmsaverage.cpp */,
+			);
+			path = "Cyclone Objects";
 			sourceTree = "<group>";
 		};
 		07E5200C2673857E005D72A6 /* Intensifier-WebGUI */ = {
@@ -533,10 +554,11 @@
 		07EA7ACC266E908700759EFE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				07EF9F7B267ABD95006957E0 /* Extensions */,
+				07B34564267C529500CB5958 /* AudioUnitManager.swift */,
 				07F39FFE267180F600DCE13A /* AUv3IntensifierViewController.swift */,
-				0762E36426727E2C001CA5BC /* dependencies */,
+				07EF9F7B267ABD95006957E0 /* Extensions */,
 				07EA7ACD266E90EB00759EFE /* AudioUnit */,
+				0762E36426727E2C001CA5BC /* dependencies */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -594,6 +616,7 @@
 			files = (
 				072E3AC82677E09600B641CE /* IntensifierDSPKernelAdapter.h in Headers */,
 				072E3AC72677E09600B641CE /* IntensifierAUv3Framework.h in Headers */,
+				07C5117C267D6FDE00F486D8 /* rmsaverage.h in Headers */,
 				072E3ACD2677E11D00B641CE /* AdjustableDelayLine.h in Headers */,
 				072E3ACE2677E11D00B641CE /* StereoDelay.h in Headers */,
 				072E3AC32677E07B00B641CE /* BufferedAudioBus.hpp in Headers */,
@@ -609,6 +632,7 @@
 			files = (
 				07EA7ADC266E958000759EFE /* IntensifierDSPKernelAdapter.h in Headers */,
 				0762E36D26727E2C001CA5BC /* AdjustableDelayLine.h in Headers */,
+				07C5117B267D6FDE00F486D8 /* rmsaverage.h in Headers */,
 				0762E3702672B050001CA5BC /* StereoDelay.h in Headers */,
 				079A36D02671559300DD518E /* ParameterRamper.hpp in Headers */,
 				07EA7AC5266E8A0D00759EFE /* IntensifierAUv3Framework.h in Headers */,
@@ -856,12 +880,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C5117F267D78EA00F486D8 /* rmsaverage.cpp in Sources */,
 				072E3AD12677E16600B641CE /* DSPKernel.mm in Sources */,
 				07EF9F7E267ABE21006957E0 /* AUValue+truncate.swift in Sources */,
 				072E3ACF2677E13200B641CE /* AdjustableDelayLine.cpp in Sources */,
 				07E02F3026784769005B9F1A /* AUv3IntensifierViewControllerExtension.swift in Sources */,
 				072E3AD02677E13200B641CE /* StereoDelay.cpp in Sources */,
 				072E3AC92677E0EB00B641CE /* AUv3IntensifierViewController.swift in Sources */,
+				07B34566267C529500CB5958 /* AudioUnitManager.swift in Sources */,
 				072E3ACA2677E0EB00B641CE /* AUv3Intensifier.swift in Sources */,
 				072E3ACB2677E0EB00B641CE /* AUv3IntensifierParameters.swift in Sources */,
 				072E3ACC2677E0EB00B641CE /* IntensifierDSPKernelAdapter.mm in Sources */,
@@ -907,12 +933,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C5117E267D78EA00F486D8 /* rmsaverage.cpp in Sources */,
 				0762E3712672B087001CA5BC /* StereoDelay.cpp in Sources */,
 				07EF9F7D267ABE21006957E0 /* AUValue+truncate.swift in Sources */,
 				0762E36B26727E2C001CA5BC /* AdjustableDelayLine.cpp in Sources */,
 				079A36D22671561800DD518E /* DSPKernel.mm in Sources */,
 				07F3A002267188C000DCE13A /* AUv3IntensifierParameters.swift in Sources */,
 				07F39FFF267180F600DCE13A /* AUv3IntensifierViewController.swift in Sources */,
+				07B34565267C529500CB5958 /* AudioUnitManager.swift in Sources */,
 				07F3A00426719CD900DCE13A /* AUv3Intensifier.swift in Sources */,
 				0762E33F2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift in Sources */,
 				07EA7ADA266E94D000759EFE /* IntensifierDSPKernelAdapter.mm in Sources */,
