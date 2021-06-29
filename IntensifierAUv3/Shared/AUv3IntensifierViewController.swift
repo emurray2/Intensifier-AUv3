@@ -21,6 +21,9 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
 
     var webPageLoaded = false
 
+    var delegate: ToggleDelegate?
+    var standaloneApp = false
+
     var needsConnection = true
     public var audioUnitCreated: AUv3Intensifier? {
         didSet {
@@ -105,6 +108,7 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
     private func updateUI() {
         let scripts = [
             """
+            angular.element(document.getElementsByClassName('app-container')).scope().initPreset("\(self.audioUnitCreated?.currentPreset?.name ?? "Subtle")");
             angular.element(document.getElementsByClassName('app-container')).scope().inputamount = \(inputAmountParameter.value.truncate(places: 2));
             angular.element(document.getElementsByClassName('app-container')).scope().attackamount = \(attackAmountParameter.value.truncate(places: 2));
             angular.element(document.getElementsByClassName('app-container')).scope().releaseamount = \(releaseAmountParameter.value.truncate(places: 2));
@@ -223,6 +227,7 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
         }
         if message.name == "valueListener" {
             let valueToGet = message.body as? NSNumber
+            let boolValue = message.body as? Bool
             value = valueToGet?.floatValue ?? 0
             if type != "" {
                 switch type {
@@ -238,6 +243,12 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
                 releaseTimeParameter.setValue(value, originator: nil, atHostTime: 0, eventType: .touch)
                 case "Output Amount":
                 outputAmountParameter.setValue(value, originator: nil, atHostTime: 0, eventType: .touch)
+                case "Toggle":
+                    delegate?.toggleValueDidChange(value: boolValue ?? false)
+                case "Preset":
+                    if let au = audioUnitCreated {
+                        au.setPreset(number: valueToGet?.intValue ?? 0)
+                    }
                 default:
                     break
                 }
@@ -246,6 +257,17 @@ public class AUv3IntensifierViewController: AUViewController, WKUIDelegate, WKNa
     }
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         webPageLoaded = true
+        if standaloneApp == false {
+            let script =
+            """
+            var controls = document.getElementsByClassName('controls-container');
+            controls[0].removeChild(controls[0].childNodes[17]);
+            controls[0].removeChild(controls[0].childNodes[15]);
+            "ok";
+            """
+            webView.evaluateJavaScript(script) { (result, error) in
+            }
+        }
         updateUI()
     }
 }

@@ -2,13 +2,18 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
 html {
   position: relative;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
   width: 100%;
+}
+@media screen and (max-width: 500px) {
+  html {
+    overflow-x: scroll;
+  }
 }
 
 * {
@@ -86,10 +91,116 @@ a, a:hover {
   font-weight: 300;
 }
 
+.reset {
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  margin: 15px 0;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.toggle {
+  height: 40px;
+  position: relative;
+}
+
+.toggle::-webkit-scrollbar {
+  display: none;
+}
+
+.shadow-toggle {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+}
+
+.toggle-label {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  right: 70px;
+}
+
+.toggle-container {
+  width: 60px;
+  height: 40px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  cursor: pointer;
+  border: 2px solid white;
+  background: #0DAD83;
+  transition: background 0.25s cubic-bezier(1, 0, 0, 1);
+}
+
+.toggle-handle {
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  background: black;
+  left: 20px;
+  border-radius: 18px;
+  background: white;
+  border: 2px solid #0DAD83;
+  transition: left 0.25s cubic-bezier(1, 0, 0, 1);
+}
+
+.toggle-container.toggle-off {
+  background: white;
+}
+.toggle-container.toggle-off .toggle-handle {
+  right: auto;
+  left: 0;
+}
+
+.playback-controls {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  min-width: 350px;
+}
+
+.button.play {
+  position: relative;
+  outline: 1px solid white;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.button p {
+  position: relative;
+  top: -6px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 2px;
+  font-family: sans-serif;
+  cursor: pointer;
+  color: #0DAD30;
+  height: 40px;
+  vertical-align: top;
+  margin: 15px;
+}
+
 .wrapper {
   width: 100%;
   height: auto;
   min-height: 100vh;
+  min-width: 500px;
   padding: 50px 20px;
   padding-top: 100px;
   display: flex;
@@ -121,9 +232,10 @@ a, a:hover {
   transition: all 0.3s;
 }
 .profile-card__name {
-  font-weight: 700;
+  font-weight: 450;
   font-size: 24px;
-  color: #000000;
+  color: white;
+  text-shadow: 2px 2px grey;
   margin-bottom: 15px;
 }
 

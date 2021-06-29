@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,32 +34,31 @@
 		072E3AD72677E19600B641CE /* style.css.map in Resources */ = {isa = PBXBuildFile; fileRef = 07E520102673857E005D72A6 /* style.css.map */; };
 		072E3AD82677E19600B641CE /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 07E520112673857E005D72A6 /* script.js */; };
 		072E3AD92677E19600B641CE /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 07E520122673857E005D72A6 /* style.css */; };
-		072E3B002678103600B641CE /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */; };
 		072E3B15267812A600B641CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072E3B14267812A600B641CE /* AppDelegate.swift */; };
 		072E3B17267812A600B641CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072E3B16267812A600B641CE /* SceneDelegate.swift */; };
 		072E3B19267812A600B641CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072E3B18267812A600B641CE /* ViewController.swift */; };
 		072E3B1C267812A600B641CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072E3B1A267812A600B641CE /* Main.storyboard */; };
 		072E3B1E267812A800B641CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072E3B1D267812A800B641CE /* Assets.xcassets */; };
-		072E3B21267812A800B641CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072E3B1F267812A800B641CE /* LaunchScreen.storyboard */; };
-		072E3B262678132A00B641CE /* AUv3IntensifierExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 072E3ADE2678101700B641CE /* AUv3IntensifierExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		072E3B2A2678133200B641CE /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */; };
-		072E3B2B2678133200B641CE /* IntensifierAUv3Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		072E3B862678316000B641CE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072E3B852678316000B641CE /* AudioToolbox.framework */; };
 		072E3BB126783ECE00B641CE /* AudioUnitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072E3BB026783ECE00B641CE /* AudioUnitFactory.swift */; };
-		0762E33D2671AC85001CA5BC /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; };
 		0762E33F2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E33E2671ACCA001CA5BC /* AUv3IntensifierViewControllerExtension.swift */; };
 		0762E3432671B8B4001CA5BC /* AUv3IntensifierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E3422671B8B4001CA5BC /* AUv3IntensifierExtension.swift */; };
 		0762E34C2671BE55001CA5BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E34B2671BE55001CA5BC /* AppDelegate.swift */; };
-		0762E34E2671BE55001CA5BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E34D2671BE55001CA5BC /* ViewController.swift */; };
+		0762E34E2671BE55001CA5BC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762E34D2671BE55001CA5BC /* MainViewController.swift */; };
 		0762E3502671BE56001CA5BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0762E34F2671BE56001CA5BC /* Assets.xcassets */; };
-		0762E3532671BE56001CA5BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0762E3512671BE56001CA5BC /* Main.storyboard */; };
-		0762E35A2671BEA7001CA5BC /* AUv3IntensifierExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0762E31D2671ABED001CA5BC /* AUv3IntensifierExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0762E35E2671BEF4001CA5BC /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; };
-		0762E35F2671BEF4001CA5BC /* IntensifierAUv3Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0762E36B26727E2C001CA5BC /* AdjustableDelayLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0762E36626727E2C001CA5BC /* AdjustableDelayLine.cpp */; };
 		0762E36D26727E2C001CA5BC /* AdjustableDelayLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0762E36826727E2C001CA5BC /* AdjustableDelayLine.h */; };
 		0762E3702672B050001CA5BC /* StereoDelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 0762E36A26727E2C001CA5BC /* StereoDelay.h */; };
 		0762E3712672B087001CA5BC /* StereoDelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0762E36926727E2C001CA5BC /* StereoDelay.cpp */; };
+		077DF4FE26852DB200827A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077DF50026852DB200827A17 /* Main.storyboard */; };
+		07807A4826841F00001CE506 /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; };
+		07807A4926841F00001CE506 /* IntensifierAUv3Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0784B8BC268997EC00053A49 /* AUv3IntensifierExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 072E3ADE2678101700B641CE /* AUv3IntensifierExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0784B8C326899BCA00053A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072E3B1F267812A800B641CE /* LaunchScreen.storyboard */; };
+		0784B8C426899BDD00053A49 /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */; };
+		0784B8C526899BDD00053A49 /* IntensifierAUv3Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		079937492687AEA1007DBD1C /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 079937482687AEA1007DBD1C /* AudioKit */; };
+		0799374A2687AEAA007DBD1C /* IntensifierAUv3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */; platformFilter = ios; };
 		079A36D02671559300DD518E /* ParameterRamper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36CF2671559300DD518E /* ParameterRamper.hpp */; };
 		079A36D22671561800DD518E /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 079A36D12671561800DD518E /* DSPKernel.mm */; };
 		079A36D42671563A00DD518E /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 079A36D32671563A00DD518E /* DSPKernel.hpp */; };
@@ -88,23 +87,12 @@
 		07F39FFF267180F600DCE13A /* AUv3IntensifierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F39FFE267180F600DCE13A /* AUv3IntensifierViewController.swift */; };
 		07F3A002267188C000DCE13A /* AUv3IntensifierParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3A000267185CB00DCE13A /* AUv3IntensifierParameters.swift */; };
 		07F3A00426719CD900DCE13A /* AUv3Intensifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3A00326719CD900DCE13A /* AUv3Intensifier.swift */; };
+		07FF3FF6268365E50007BE1F /* MicrophoneEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3FF5268365E50007BE1F /* MicrophoneEngine.swift */; };
+		07FF3FF7268365E50007BE1F /* MicrophoneEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3FF5268365E50007BE1F /* MicrophoneEngine.swift */; };
+		07FF3FFA268389380007BE1F /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07FF3FF9268389380007BE1F /* AudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		072E3B272678132A00B641CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07EA7AB7266E8A0D00759EFE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 072E3ADD2678101700B641CE;
-			remoteInfo = "AUv3IntensifierExtension iOS";
-		};
-		072E3B2C2678133200B641CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07EA7AB7266E8A0D00759EFE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 072E3ABA2677DEED00B641CE;
-			remoteInfo = "IntensifierAUv3Framework iOS";
-		};
 		0762E35B2671BEA7001CA5BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07EA7AB7266E8A0D00759EFE /* Project object */;
@@ -112,49 +100,52 @@
 			remoteGlobalIDString = 0762E31C2671ABED001CA5BC;
 			remoteInfo = AUv3IntensifierExtension;
 		};
+		0784B8BD268997EC00053A49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07EA7AB7266E8A0D00759EFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 072E3ADD2678101700B641CE;
+			remoteInfo = "AUv3IntensifierExtension iOS";
+		};
+		0784B8C026899B8C00053A49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07EA7AB7266E8A0D00759EFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 072E3ABA2677DEED00B641CE;
+			remoteInfo = "IntensifierAUv3Framework iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		072E3B292678132A00B641CE /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				072E3B262678132A00B641CE /* AUv3IntensifierExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		072E3B2E2678133200B641CE /* Embed Frameworks */ = {
+		07807A4A26841F00001CE506 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				072E3B2B2678133200B641CE /* IntensifierAUv3Framework.framework in Embed Frameworks */,
+				07807A4926841F00001CE506 /* IntensifierAUv3Framework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0762E35D2671BEA7001CA5BC /* Embed App Extensions */ = {
+		0784B8BF268997EC00053A49 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0762E35A2671BEA7001CA5BC /* AUv3IntensifierExtension.appex in Embed App Extensions */,
+				0784B8BC268997EC00053A49 /* AUv3IntensifierExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0762E3602671BEF4001CA5BC /* Embed Frameworks */ = {
+		0784B8C626899BDD00053A49 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0762E35F2671BEF4001CA5BC /* IntensifierAUv3Framework.framework in Embed Frameworks */,
+				0784B8C526899BDD00053A49 /* IntensifierAUv3Framework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,9 +178,8 @@
 		0762E3422671B8B4001CA5BC /* AUv3IntensifierExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierExtension.swift; sourceTree = "<group>"; };
 		0762E3492671BE55001CA5BC /* Intensifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intensifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0762E34B2671BE55001CA5BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0762E34D2671BE55001CA5BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0762E34D2671BE55001CA5BC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0762E34F2671BE56001CA5BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0762E3522671BE56001CA5BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0762E3542671BE56001CA5BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0762E3552671BE56001CA5BC /* Intensifier_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Intensifier_macOS.entitlements; sourceTree = "<group>"; };
 		0762E36626727E2C001CA5BC /* AdjustableDelayLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdjustableDelayLine.cpp; sourceTree = "<group>"; };
@@ -197,6 +187,7 @@
 		0762E36826727E2C001CA5BC /* AdjustableDelayLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustableDelayLine.h; sourceTree = "<group>"; };
 		0762E36926727E2C001CA5BC /* StereoDelay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StereoDelay.cpp; sourceTree = "<group>"; };
 		0762E36A26727E2C001CA5BC /* StereoDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StereoDelay.h; sourceTree = "<group>"; };
+		077DF4FF26852DB200827A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		079A36CF2671559300DD518E /* ParameterRamper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ParameterRamper.hpp; sourceTree = "<group>"; };
 		079A36D12671561800DD518E /* DSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPKernel.mm; sourceTree = "<group>"; };
 		079A36D32671563A00DD518E /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
@@ -206,6 +197,8 @@
 		07C51179267D6E5D00F486D8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		07C5117A267D6FDE00F486D8 /* rmsaverage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rmsaverage.h; sourceTree = "<group>"; };
 		07C5117D267D78EA00F486D8 /* rmsaverage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rmsaverage.cpp; sourceTree = "<group>"; };
+		07CFB5D42688346A00D364E4 /* Intensifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Intensifier.entitlements; sourceTree = "<group>"; };
+		07CFB5D52688346A00D364E4 /* AUv3IntensifierExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AUv3IntensifierExtension.entitlements; path = "AUv3IntensifierExtension iOS/AUv3IntensifierExtension.entitlements"; sourceTree = "<group>"; };
 		07E02F2F26784769005B9F1A /* AUv3IntensifierViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewControllerExtension.swift; sourceTree = "<group>"; };
 		07E5200F2673857E005D72A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		07E520102673857E005D72A6 /* style.css.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = style.css.map; sourceTree = "<group>"; };
@@ -247,6 +240,7 @@
 		07F39FFE267180F600DCE13A /* AUv3IntensifierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierViewController.swift; sourceTree = "<group>"; };
 		07F3A000267185CB00DCE13A /* AUv3IntensifierParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3IntensifierParameters.swift; sourceTree = "<group>"; };
 		07F3A00326719CD900DCE13A /* AUv3Intensifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUv3Intensifier.swift; sourceTree = "<group>"; };
+		07FF3FF5268365E50007BE1F /* MicrophoneEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +248,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079937492687AEA1007DBD1C /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072E3B002678103600B641CE /* IntensifierAUv3Framework.framework in Frameworks */,
+				0799374A2687AEAA007DBD1C /* IntensifierAUv3Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072E3B862678316000B641CE /* AudioToolbox.framework in Frameworks */,
-				072E3B2A2678133200B641CE /* IntensifierAUv3Framework.framework in Frameworks */,
+				0784B8C426899BDD00053A49 /* IntensifierAUv3Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0762E33D2671AC85001CA5BC /* IntensifierAUv3Framework.framework in Frameworks */,
+				07807A4826841F00001CE506 /* IntensifierAUv3Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FF3FFA268389380007BE1F /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +326,7 @@
 		072E3B13267812A600B641CE /* Intensifier iOS */ = {
 			isa = PBXGroup;
 			children = (
+				07CFB5D42688346A00D364E4 /* Intensifier.entitlements */,
 				072E3B14267812A600B641CE /* AppDelegate.swift */,
 				072E3B16267812A600B641CE /* SceneDelegate.swift */,
 				072E3B18267812A600B641CE /* ViewController.swift */,
@@ -364,10 +360,10 @@
 		0762E34A2671BE55001CA5BC /* Intensifier macOS */ = {
 			isa = PBXGroup;
 			children = (
+				077DF50026852DB200827A17 /* Main.storyboard */,
 				0762E34B2671BE55001CA5BC /* AppDelegate.swift */,
-				0762E34D2671BE55001CA5BC /* ViewController.swift */,
+				0762E34D2671BE55001CA5BC /* MainViewController.swift */,
 				0762E34F2671BE56001CA5BC /* Assets.xcassets */,
-				0762E3512671BE56001CA5BC /* Main.storyboard */,
 				0762E3542671BE56001CA5BC /* Info.plist */,
 				0762E3552671BE56001CA5BC /* Intensifier_macOS.entitlements */,
 			);
@@ -526,6 +522,7 @@
 		07EA7AB6266E8A0D00759EFE = {
 			isa = PBXGroup;
 			children = (
+				07CFB5D52688346A00D364E4 /* AUv3IntensifierExtension.entitlements */,
 				072E3AAD2677044400B641CE /* iOS */,
 				0762E31E2671ABED001CA5BC /* macOS */,
 				07EA7ACC266E908700759EFE /* Shared */,
@@ -562,6 +559,7 @@
 		07EA7ACC266E908700759EFE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				07FF3FF5268365E50007BE1F /* MicrophoneEngine.swift */,
 				07B34564267C529500CB5958 /* AudioUnitManager.swift */,
 				07F39FFE267180F600DCE13A /* AUv3IntensifierViewController.swift */,
 				07EF9F7B267ABD95006957E0 /* Extensions */,
@@ -669,6 +667,9 @@
 			dependencies = (
 			);
 			name = "IntensifierAUv3Framework iOS";
+			packageProductDependencies = (
+				079937482687AEA1007DBD1C /* AudioKit */,
+			);
 			productName = "IntensifierAUv3Framework iOS";
 			productReference = 072E3ABB2677DEED00B641CE /* IntensifierAUv3Framework.framework */;
 			productType = "com.apple.product-type.framework";
@@ -697,14 +698,14 @@
 				072E3B0E267812A600B641CE /* Sources */,
 				072E3B0F267812A600B641CE /* Frameworks */,
 				072E3B10267812A600B641CE /* Resources */,
-				072E3B292678132A00B641CE /* Embed App Extensions */,
-				072E3B2E2678133200B641CE /* Embed Frameworks */,
+				0784B8BF268997EC00053A49 /* Embed App Extensions */,
+				0784B8C626899BDD00053A49 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				072E3B282678132A00B641CE /* PBXTargetDependency */,
-				072E3B2D2678133200B641CE /* PBXTargetDependency */,
+				0784B8C126899B8C00053A49 /* PBXTargetDependency */,
+				0784B8BE268997EC00053A49 /* PBXTargetDependency */,
 			);
 			name = "Intensifier iOS";
 			productName = "Intensifier iOS";
@@ -718,6 +719,7 @@
 				0762E3192671ABED001CA5BC /* Sources */,
 				0762E31A2671ABED001CA5BC /* Frameworks */,
 				0762E31B2671ABED001CA5BC /* Resources */,
+				07807A4A26841F00001CE506 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -735,8 +737,6 @@
 				0762E3452671BE55001CA5BC /* Sources */,
 				0762E3462671BE55001CA5BC /* Frameworks */,
 				0762E3472671BE55001CA5BC /* Resources */,
-				0762E35D2671BEA7001CA5BC /* Embed App Extensions */,
-				0762E3602671BEF4001CA5BC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -762,6 +762,9 @@
 			dependencies = (
 			);
 			name = IntensifierAUv3Framework;
+			packageProductDependencies = (
+				07FF3FF9268389380007BE1F /* AudioKit */,
+			);
 			productName = IntensifierAUv3Framework;
 			productReference = 07EA7AC0266E8A0D00759EFE /* IntensifierAUv3Framework.framework */;
 			productType = "com.apple.product-type.framework";
@@ -805,6 +808,9 @@
 				Base,
 			);
 			mainGroup = 07EA7AB6266E8A0D00759EFE;
+			packageReferences = (
+				07FF3FF8268389380007BE1F /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 07EA7AC1266E8A0D00759EFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -846,7 +852,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072E3B21267812A800B641CE /* LaunchScreen.storyboard in Resources */,
+				0784B8C326899BCA00053A49 /* LaunchScreen.storyboard in Resources */,
 				072E3B1E267812A800B641CE /* Assets.xcassets in Resources */,
 				072E3B1C267812A600B641CE /* Main.storyboard in Resources */,
 			);
@@ -864,7 +870,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0762E3502671BE56001CA5BC /* Assets.xcassets in Resources */,
-				0762E3532671BE56001CA5BC /* Main.storyboard in Resources */,
+				077DF4FE26852DB200827A17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -890,6 +896,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FF3FF7268365E50007BE1F /* MicrophoneEngine.swift in Sources */,
 				07C5117F267D78EA00F486D8 /* rmsaverage.cpp in Sources */,
 				072E3AD12677E16600B641CE /* DSPKernel.mm in Sources */,
 				07EF9F7E267ABE21006957E0 /* AUValue+truncate.swift in Sources */,
@@ -935,7 +942,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0762E34E2671BE55001CA5BC /* ViewController.swift in Sources */,
+				0762E34E2671BE55001CA5BC /* MainViewController.swift in Sources */,
 				0762E34C2671BE55001CA5BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -944,6 +951,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FF3FF6268365E50007BE1F /* MicrophoneEngine.swift in Sources */,
 				07C5117E267D78EA00F486D8 /* rmsaverage.cpp in Sources */,
 				0762E3712672B087001CA5BC /* StereoDelay.cpp in Sources */,
 				07EF9F7D267ABE21006957E0 /* AUValue+truncate.swift in Sources */,
@@ -962,20 +970,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		072E3B282678132A00B641CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 072E3ADD2678101700B641CE /* AUv3IntensifierExtension iOS */;
-			targetProxy = 072E3B272678132A00B641CE /* PBXContainerItemProxy */;
-		};
-		072E3B2D2678133200B641CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 072E3ABA2677DEED00B641CE /* IntensifierAUv3Framework iOS */;
-			targetProxy = 072E3B2C2678133200B641CE /* PBXContainerItemProxy */;
-		};
 		0762E35C2671BEA7001CA5BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0762E31C2671ABED001CA5BC /* AUv3IntensifierExtension */;
 			targetProxy = 0762E35B2671BEA7001CA5BC /* PBXContainerItemProxy */;
+		};
+		0784B8BE268997EC00053A49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 072E3ADD2678101700B641CE /* AUv3IntensifierExtension iOS */;
+			targetProxy = 0784B8BD268997EC00053A49 /* PBXContainerItemProxy */;
+		};
+		0784B8C126899B8C00053A49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 072E3ABA2677DEED00B641CE /* IntensifierAUv3Framework iOS */;
+			targetProxy = 0784B8C026899B8C00053A49 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -996,10 +1004,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		0762E3512671BE56001CA5BC /* Main.storyboard */ = {
+		077DF50026852DB200827A17 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0762E3522671BE56001CA5BC /* Base */,
+				077DF4FF26852DB200827A17 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1013,24 +1021,23 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 6CV59M265C;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = iOS/IntensifierAUv3Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.IntensifierAUv3FrameworkiOS;
 				PRODUCT_MODULE_NAME = IntensifierAUv3Framework;
 				PRODUCT_NAME = IntensifierAUv3Framework;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1042,24 +1049,23 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 6CV59M265C;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = iOS/IntensifierAUv3Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.IntensifierAUv3FrameworkiOS;
 				PRODUCT_MODULE_NAME = IntensifierAUv3Framework;
 				PRODUCT_NAME = IntensifierAUv3Framework;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1068,9 +1074,10 @@
 		072E3AFE2678101700B641CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "AUv3IntensifierExtension iOS/AUv3IntensifierExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "";
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 6CV59M265C;
 				INFOPLIST_FILE = iOS/AUv3IntensifierExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1080,10 +1087,12 @@
 					"@executable_path/../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.Intensifier.AUv3IntensifierExtensioniOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.auraaudio.Intensifier-macOS.AUv3IntensifierExtensioniOS";
 				PRODUCT_MODULE_NAME = AUv3IntensifierExtension;
 				PRODUCT_NAME = AUv3IntensifierExtension;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1094,9 +1103,10 @@
 		072E3AFF2678101700B641CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "AUv3IntensifierExtension iOS/AUv3IntensifierExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "";
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 6CV59M265C;
 				INFOPLIST_FILE = iOS/AUv3IntensifierExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1106,10 +1116,12 @@
 					"@executable_path/../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.Intensifier.AUv3IntensifierExtensioniOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.auraaudio.Intensifier-macOS.AUv3IntensifierExtensioniOS";
 				PRODUCT_MODULE_NAME = AUv3IntensifierExtension;
 				PRODUCT_NAME = AUv3IntensifierExtension;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1120,12 +1132,13 @@
 		072E3B24267812A800B641CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "Intensifier iOS/Intensifier.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 6CV59M265C;
 				INFOPLIST_FILE = "Intensifier iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1134,9 +1147,11 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.Intensifier;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.auraaudio.Intensifier-macOS";
 				PRODUCT_MODULE_NAME = Intensifier;
 				PRODUCT_NAME = Intensifier;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1145,12 +1160,13 @@
 		072E3B25267812A800B641CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "Intensifier iOS/Intensifier.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 6CV59M265C;
 				INFOPLIST_FILE = "Intensifier iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1159,9 +1175,11 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.Intensifier;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.auraaudio.Intensifier-macOS";
 				PRODUCT_MODULE_NAME = Intensifier;
 				PRODUCT_NAME = Intensifier;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1170,9 +1188,13 @@
 		0762E3392671ABED001CA5BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				CODE_SIGN_ENTITLEMENTS = macOS/AUv3IntensifierExtension/AUv3IntensifierExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6CV59M265C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = macOS/AUv3IntensifierExtension/Info.plist;
@@ -1185,6 +1207,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.auraaudio.Intensifier-macOS.AUv3IntensifierExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Intensifier Extension macOS";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -1196,9 +1219,13 @@
 		0762E33A2671ABED001CA5BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				CODE_SIGN_ENTITLEMENTS = macOS/AUv3IntensifierExtension/AUv3IntensifierExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6CV59M265C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = macOS/AUv3IntensifierExtension/Info.plist;
@@ -1211,6 +1238,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.auraaudio.Intensifier-macOS.AUv3IntensifierExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Intensifier Extension macOS";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -1223,11 +1251,15 @@
 		0762E3572671BE56001CA5BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Intensifier macOS/Intensifier_macOS.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6CV59M265C;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1239,6 +1271,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.auraaudio.Intensifier-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Intensifier App macOS";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1247,11 +1280,15 @@
 		0762E3582671BE56001CA5BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Intensifier macOS/Intensifier_macOS.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6CV59M265C;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1263,6 +1300,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.auraaudio.Intensifier-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Intensifier App macOS";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1394,9 +1432,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1427,9 +1468,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1522,6 +1566,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07FF3FF8268389380007BE1F /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		079937482687AEA1007DBD1C /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07FF3FF8268389380007BE1F /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		07FF3FF9268389380007BE1F /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07FF3FF8268389380007BE1F /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07EA7AB7266E8A0D00759EFE /* Project object */;
 }

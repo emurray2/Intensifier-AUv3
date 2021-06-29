@@ -23,7 +23,7 @@
         _kernel.setParameter(IntensifierParamOutputAmount, 0);
 
         // Create the input and output busses.
-        _inputBus.init(format, 8);
+        _inputBus.init(format, 2);
         _outputBus = [[AUAudioUnitBus alloc] initWithFormat:format error:nil];
     }
     return self;

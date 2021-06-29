@@ -14,14 +14,30 @@
     <div class="profile-card js-profile-card">
         <div class="profile-card__cnt js-profile-cnt">
             <div class="profile-card__name">Intensifier AUv3</div>
+            <div class="toggle shadow-toggle" toggle property="shadow" label="Shadow"></div>
             <div class="app-container" ng-app="IntensifierAUv3" ng-controller="IntensifierCtrl">
               <div class="controls-container">
+              <div class="playback-controls">
+                  <div class="button back" ng-click="goBack()">
+                      <svg width="60" height="40">
+                          <path ng-show="!play" stroke="none" fill="white" d="M24,20 l18,-10 v20 z"/>
+                      </svg>
+                  </div>
+                  <div class="button play"><p>Subtle</p></div>
+                  <div class="button forward" ng-click="goForward()">
+                      <svg width="60" height="40">
+                          <path ng-show="!play" stroke="none" fill="white" d="M42,20 l-18,-10 v20 z"/>
+                      </svg>
+                  </div>
+              </div>
                 <div class="slider inputamount-slider" slider label="Input Amount" minvalue="-40" maxvalue="15" control="inputamount" decimals="2" unit="dB"></div>
                 <div class="slider attackamount-slider" slider label="Attack Amount" minvalue="-40" maxvalue="30" control="attackamount" decimals="2" unit="dB"></div>
                 <div class="slider releaseamount-slider" slider label="Release Amount" minvalue="-40" maxvalue="30" control="releaseamount" decimals="2" unit="dB"></div>
                 <div class="slider attacktime-slider" slider label="Attack Time" minvalue="0" maxvalue="500" control="attacktime" decimals="2" unit="ms"></div>
                 <div class="slider releasetime-slider" slider label="Release Time" minvalue="0" maxvalue="5" control="releasetime" decimals="2" unit="sec"></div>
                 <div class="slider outputamount-slider" slider label="Output Amount" minvalue="-40" maxvalue="15" control="outputamount" decimals="2" unit="dB"></div>
+                <div class="reset"></div>
+                <div class="toggle shadow-toggle" toggle property="shadow" label="Off/On"></div>
               </div>
             </div>
         </div>

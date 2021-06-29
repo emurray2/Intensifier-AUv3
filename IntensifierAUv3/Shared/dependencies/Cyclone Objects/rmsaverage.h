@@ -1,6 +1,4 @@
 #pragma once
-#define AVERAGE_MAXBUF  882000 //max buffer size
-#define AVERAGE_DEFNPOINTS  100
 
 #include <vector>
 #include <math.h>

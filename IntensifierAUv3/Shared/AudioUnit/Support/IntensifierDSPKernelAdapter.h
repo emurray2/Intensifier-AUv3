@@ -1,5 +1,5 @@
 #import <AudioToolbox/AudioToolbox.h>
-@class AUv3IntensifierController;
+@class AUv3IntensifierViewController;
 NS_ASSUME_NONNULL_BEGIN
 @interface IntensifierDSPKernelAdapter : NSObject
 

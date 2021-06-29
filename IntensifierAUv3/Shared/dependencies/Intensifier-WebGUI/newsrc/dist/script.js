@@ -4,6 +4,32 @@ var card = document.querySelector('.js-profile-card');
 var app = angular.module('IntensifierAUv3', []);
 
 app.controller('IntensifierCtrl', function($scope) {
+    var presets = ["Subtle", "W I D E", "CrOnchy"];
+    var gpresetNum;
+    $scope.initPreset = function(name) {
+        document.getElementsByClassName('button')[1].children[0].firstChild.data = name;
+        var index = presets.indexOf(name);
+        gpresetNum = index;
+    };
+    $scope.goForward = function () {
+        if (gpresetNum >= 2) {
+            gpresetNum = 0;
+        } else {
+            gpresetNum++;
+        }
+        var name = presets[gpresetNum]
+        window.webkit.messageHandlers.typeListener.postMessage("Preset");
+        window.webkit.messageHandlers.valueListener.postMessage(gpresetNum);
+    };
+    $scope.goBack = function () {
+        if (gpresetNum <= 0) {
+            gpresetNum = 2;
+        } else {
+            gpresetNum -= 1;
+        }
+        window.webkit.messageHandlers.typeListener.postMessage("Preset");
+        window.webkit.messageHandlers.valueListener.postMessage(gpresetNum);
+    };
 });
 
 app.directive('slider', function () {
@@ -95,4 +121,28 @@ app.directive('slider', function () {
 			});
 		}
 	}
+});
+
+app.directive('toggle', function () {
+    return {
+        restrict: 'A',
+        template: `
+            <div class="toggle-label">{{ label }}</div>
+            <div class="toggle-container" ng-class="{'toggle-off': !property}">
+                <div class="toggle-handle"></div>
+            </div>
+        `,
+        scope: {
+            'label': '@',
+            'property': '=',
+        },
+        link: function (scope, element, attrs) {
+            element.on('click', function () {
+                scope.property = !scope.property;
+                window.webkit.messageHandlers.typeListener.postMessage("Toggle");
+                window.webkit.messageHandlers.valueListener.postMessage(scope.property);
+                scope.$apply();
+            });
+        }
+    }
 });

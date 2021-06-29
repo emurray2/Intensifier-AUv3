@@ -39,7 +39,7 @@ class AUv3IntensifierParameters {
                                             valueStrings: nil,
                                             dependentParameters: nil)
         // Set default value
-        parameter.value = 0.0
+        parameter.value = -29.0
 
         return parameter
     }()
@@ -58,7 +58,7 @@ class AUv3IntensifierParameters {
                                             valueStrings: nil,
                                             dependentParameters: nil)
         // Set default value
-        parameter.value = 0.0
+        parameter.value = 5.0
 
         return parameter
     }()
@@ -77,7 +77,7 @@ class AUv3IntensifierParameters {
                                             valueStrings: nil,
                                             dependentParameters: nil)
         // Set default value
-        parameter.value = 20.0
+        parameter.value = 149.0
 
         return parameter
     }()

@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSExtension</key>
@@ -32,15 +32,15 @@
 			<array>
 				<dict>
 					<key>description</key>
-					<string>AUv3Intensifier</string>
+					<string>Intensifier AUv3</string>
 					<key>manufacturer</key>
-					<string>Auem</string>
+					<string>Evmu</string>
 					<key>name</key>
-					<string>Aura Audio LLC: IntensifierAUv3</string>
+					<string>Evan Murray: Intensifier AUv3</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>
-					<string>inta</string>
+					<string>inte</string>
 					<key>tags</key>
 					<array>
 						<string>Effects</string>
@@ -48,7 +48,7 @@
 					<key>type</key>
 					<string>aufx</string>
 					<key>version</key>
-					<real>67072</real>
+					<real>65536</real>
 				</dict>
 			</array>
 		</dict>

@@ -40,7 +40,9 @@ public class AUv3Intensifier: AUAudioUnit {
 
     public override var factoryPresets: [AUAudioUnitPreset] {
         return [
-            AUAudioUnitPreset(number: 0, name: "Subtle")
+            AUAudioUnitPreset(number: 0, name: "Subtle"),
+            AUAudioUnitPreset(number: 1, name: "W I D E"),
+            AUAudioUnitPreset(number: 2, name: "CrOnchy")
         ]
     }
 
@@ -52,16 +54,18 @@ public class AUv3Intensifier: AUAudioUnit {
         releaseTime: AUValue,
         outputAmount: AUValue
     )] = [
-        (0.0, -29.0, 19.0, 149.0, 1.0, 6.0) // "Subtle"
+        (0.0, -29.0, 5.0, 149.0, 1.0, 0.0), // "Subtle"
+        (15.0, -17.68, 1.59, 158.36, 0.31, 2.03), // "W I D E"
+        (2.86, 5.68, -32.48, 272.9, 0.82, -9.02) // "CrOnchy"
     ]
 
     private var _currentPreset: AUAudioUnitPreset?
-
     public override var currentPreset: AUAudioUnitPreset? {
         get { return _currentPreset }
         set {
             // If the newValue is nil, return.
             guard let preset = newValue else {
+                print("bad")
                 _currentPreset = nil
                 return
             }
@@ -79,22 +83,15 @@ public class AUv3Intensifier: AUAudioUnit {
                 )
                 _currentPreset = preset
             }
-            // User presets are always negative.
-            else {
-                // Attempt to restore the archived state for this user preset.
-                do {
-                    fullStateForDocument = try presetState(for: preset)
-                    // Set the currentPreset after we've successfully restored the state.
-                    _currentPreset = preset
-                } catch {
-                    print("Unable to restore set for preset \(preset.name)")
-                }
-            }
         }
     }
 
     public override var supportsUserPresets: Bool {
         return true
+    }
+
+    public func setPreset(number: Int) {
+        currentPreset = factoryPresets[number]
     }
 
     public override init(componentDescription: AudioComponentDescription,
@@ -110,10 +107,10 @@ public class AUv3Intensifier: AUAudioUnit {
         try super.init(componentDescription: componentDescription, options: options)
 
         // Log component description values
-        log(componentDescription)
+        //log(componentDescription)
 
         // Set the default preset
-        currentPreset = factoryPresets.first
+        _currentPreset = factoryPresets.first
     }
 
     private func log(_ acd: AudioComponentDescription) {
@@ -126,7 +123,8 @@ public class AUv3Intensifier: AUAudioUnit {
                   type: \(acd.componentType.stringValue)
                subtype: \(acd.componentSubType.stringValue)
           manufacturer: \(acd.componentManufacturer.stringValue)
-                 flags: \(String(format: "%#010x", acd.componentFlags))
+                 flags: \(String(format: "%#010x", acd.componentFlags)),
+                 mask: \(String(format: "%#010x", acd.componentFlagsMask))
         )
         """
         print(message)
@@ -150,6 +148,12 @@ public class AUv3Intensifier: AUAudioUnit {
         try super.allocateRenderResources()
         kernelAdapter.allocateRenderResources()
     }
+
+    public override var channelCapabilities: [NSNumber]? {
+        return [1, 1, 2, 2];
+    }
+
+    
 
     public override func deallocateRenderResources() {
         super.deallocateRenderResources()
