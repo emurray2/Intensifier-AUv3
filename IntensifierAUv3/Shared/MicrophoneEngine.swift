@@ -1,4 +1,5 @@
 import AudioKit
+import AudioKitEX
 import AVFoundation
 
 public class Intensifier: Node {
@@ -15,7 +16,12 @@ public class MicrophoneEngine {
     let engine = AudioEngine()
     let mic: AudioEngine.InputNode
     var headphonesAreIn: Bool {
-        Settings.headPhonesPlugged
+        #if os(iOS)
+            Settings.headPhonesPlugged
+        #endif
+        #if !os(iOS)
+            return false
+        #endif
     }
     public var intensifier: Intensifier!
     init(_ componentDescription: AudioComponentDescription) {
@@ -23,8 +29,10 @@ public class MicrophoneEngine {
         intensifier = Intensifier(mic, componentDescription)
         engine.output = intensifier
         do {
-            try Settings.session.setCategory(.playAndRecord, options: [.defaultToSpeaker, .allowBluetooth, .allowBluetoothA2DP])
-            try Settings.session.setActive(true)
+            #if os(iOS)
+                try Settings.session.setCategory(.playAndRecord, options: [.defaultToSpeaker, .allowBluetooth, .allowBluetoothA2DP])
+                try Settings.session.setActive(true)
+            #endif
         } catch {
             print("failed to set avaudiosession")
         }
