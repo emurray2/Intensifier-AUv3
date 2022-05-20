@@ -1,16 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "AudioKit",
-        "repositoryURL": "https://github.com/AudioKit/AudioKit",
-        "state": {
-          "branch": "main",
-          "revision": "5eefc06cc8c503624c92edcb4acbf28574f08acf",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "audiokit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AudioKit/AudioKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "db55444d594a1564cb4b40ef8e78b8bb0e4577d6"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "audiokitex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AudioKit/AudioKitEX",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a8c18b865896fad3a03ea9477be1a077401e4cf4"
+      }
+    }
+  ],
+  "version" : 2
 }

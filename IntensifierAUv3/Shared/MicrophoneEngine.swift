@@ -17,7 +17,7 @@ public class MicrophoneEngine {
     let mic: AudioEngine.InputNode
     var headphonesAreIn: Bool {
         #if os(iOS)
-            Settings.headPhonesPlugged
+            return Settings.headPhonesPlugged
         #endif
         #if !os(iOS)
             return false
